@@ -1,0 +1,11 @@
+<ion-view view-title="Members">
+    <ion-content>
+        <div class="list">
+            <a ng-repeat="member in browseMembers.Members track by $index" class="item item-avatar" ui-sref='app.single({memberId: member.Id, username: member.Username, firstName: member.FirstName, lastName: member.LastName})'>
+                <img ng-src="{{member.Img}}">
+                <h2>{{member.Username}}</h2>
+                <p>{{member.FirstName}} {{member.LastName}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

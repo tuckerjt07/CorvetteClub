@@ -1,0 +1,49 @@
+<ion-view view-title="{{singleMember.Username}}">
+    <ion-content>
+        <div class="list card">
+
+            <div class="item item-avatar">
+                <img ng-show="{{singleMember}}" ng-src="{{singleMember.Member.ProfileImage}}">
+                <h2>{{singleMember.FirstName}} {{singleMember.LastName}}</h2>
+                <p>{{singleMember.Member.Birthday}}</p>
+            </div>
+
+            <div class="item item-body">
+                <slide-show slideshow='../../templates/Widgets/slideshow.html'
+                            ng-controller="MemberSlideShowCtrl as slideshow"
+                            ng-init="slideshow.Title = singleMember.Username"></slide-show>
+                <p>
+                    {{singleMember.Member.About}}
+                </p>
+            </div>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a ng-controller="MemberCarCtrl as memberCar"
+                   class="tab-item"
+                   on-tap="memberCar.openModal(memberCar.carModal)">
+                    <i class="icon ion-model-s"></i>
+                    Cars
+                </a>
+                <a ng-controller="MemberEventCtrl as memberEvent"
+                   class="tab-item"
+                   on-tap="memberEvent.openModal(memberEvent.eventModal)">
+                    <i class="icon ion-android-calendar"></i>
+                    Events
+                </a>
+            </div>
+<!--
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                    <i class="icon ion-thumbsup"></i>
+                    Like
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-chatbox"></i>
+                    Comment
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-share"></i>
+                    Share
+                </a>
+            </div>
+    </ion-content>
+</ion-view>

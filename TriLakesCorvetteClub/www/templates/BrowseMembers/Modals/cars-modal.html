@@ -1,0 +1,17 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-dark">
+        <h1 class="title">{{memberCar.Username}}'s Cars</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="memberCar.closeModal(memberCar.carModal)">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <a ng-repeat="car in memberCar.Cars track by $index" class="item item-thumbnail-left">
+                <img ng-src="{{car.Img}}">
+                <h2>{{car.Make}} {{car.Model}}</h2>
+                <p>{{car.Year}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-modal-view>

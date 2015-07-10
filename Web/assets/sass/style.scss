@@ -1,0 +1,230 @@
+//Modify Colors Here
+@import 'bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+//Add variables
+
+//Create mixins
+@mixin custom-button($border, $color, $background, $display, $text-align, $font-size, $primary-border, $primary-background, $primary-color, $secondary-background, $secondary-color, $secondary-outline) {
+    @extend .btn;
+    border: $border;
+    color: $color;
+    background: $background;
+    display: $display;
+    text-align: $text-align;
+    font-size: $font-size;
+    &:hover, &:active, &:active:hover {
+        border: $primary-border;
+        background: $primary-background;
+        color: $primary-color;
+    }
+    &:focus, &:active:focus, &.active:focus, &.focus, &:active.focus, &.active.focus {
+        border: $secondary-background;
+        color: $secondary-color;
+        outline: $secondary-outline;
+    }
+}
+
+//Add fonts
+@font-face {
+    font-family: Corvette;
+    src: url(../../fonts/CORVETTE.TTF);
+}
+
+//Adjust tag styles
+body {
+    background: none;
+}
+
+//Make classes here
+.carbon-fiber-background {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+");
+}
+
+.btn-submit {
+    @include custom-button (1px solid crimson, crimson, rgba(0,0,0,0.8), inline-block, center, 1.1em, 1px solid crimson, rgba(100, 100, 100, 0.8), crimson, rgba(100,100,100,0.8), crimson, rgba(220,20,60,0.4) solid thick);
+}
+
+.btn-cancel {
+    @include custom-button (1px solid #111111, #111111, rgba(100, 100, 100, 0.8), inline-block, center, 1.1em, 1px solid #444444, rgba(0,0,0,0.8), #bbbbbb, rgba(0,0,0,.8), #bbbbbb, rgba(100,100,100,0.4) solid thick);
+}
+
+.full-screen {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.full-screen-img {
+    @extend .full-screen;
+    max-height: 100vh;
+    max-width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.play-pause-container {
+    @extend .col-xs-3, .col-sm-3, .col-md-3, .col-lg-4, .col-xs-offset-7, .col-sm-offset-9, .col-md-offset-9, .col-lg-offset-10;
+    min-height: 60px;
+    min-width: 200px;
+    max-height: 60px;
+    max-width: 200px;
+    position: absolute;
+    z-index: 101;
+}
+
+.media-control-container {
+    border-radius: 50%;
+    border: 1px solid #bbbbbb;
+    padding: 10px;
+    background: rgba(10, 10, 10, 0.7);
+    color: #bbbbbb;
+}
+
+.media-control-container:hover {
+    background: rgba(100, 100, 100, 0.8);
+}
+
+.play-pause {
+    @extend .media-control-container;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.backward-forward {
+    @extend .media-control-container;
+    font-size: 1.2em;
+    text-align: center;
+    vertical-align: super;
+    cursor: pointer;
+}
+
+.webpage-title {
+    @extend .hidden-xs;
+    font-family: Corvette;
+    z-index: 101;
+    color: crimson;
+    font-size: 1.4em;
+    position: absolute;
+    top: 30px;
+    padding-left: 10px;
+}
+
+.webpage-title-xs {
+    @extend .hidden-sm, .hidden-md, .hidden-lg;
+    font-family: Corvette;
+    z-index: 101;
+    color: crimson;
+    font-size: .6em;
+    position: absolute;
+    top: 10px;
+}
+
+.second-line {
+    margin-left: 45px;
+}
+
+.about-club {
+    @extend .col-sm-8, .col-md-8, .col-lg-8, .hidden-xs;
+    font-family: Corvette;
+    z-index: 101;
+    font-size: .6em;
+    color: crimson;
+    position: absolute;
+    bottom: 50px;
+}
+
+.about-club-xs {
+    @extend .col-xs-11, .hidden-sm, .hidden-md, .hidden-lg;
+    font-family: Corvette;
+    z-index: 101;
+    color: crimson;
+    font-size: .4em;
+    position: absolute;
+}
+
+.home-actions {
+    @extend .hidden-xs;
+    position: absolute;
+    z-index: 101;
+    top: 25px;
+    right: 50px;
+}
+
+.home-action-button {
+    @include custom-button (1px solid crimson, crimson, rgba(0,0,0,0.8), inline-block, center, 1.1em, 1px solid crimson, rgba(100, 100, 100, 0.8), crimson, rgba(100,100,100,0.8), crimson, rgba(100, 100,100,0.9) solid 5px);
+    min-width: 120px;
+    min-height: 30px;
+    cursor: pointer;
+    margin-left: 13px;
+    padding-top: 4px;
+}
+
+.login-title {
+    @extend .col-sm-offset-2, .col-md-offset-2, .col-lg-offset-1;
+    font-family: Corvette;
+    color: white;
+    font-size: 1.4em;
+    position: absolute;
+}
+
+.register-title {
+    @extend .col-sm-offset-1, .col-md-offset-1, .col-lg-offset-1;
+    color: white;
+}
+
+.login-text {
+    @extend .col-sm-offset-1, .col-md-offset-2, .col-lg-offset-1, .col-xs-12, .col-sm-10, .col-md-8, .col-lg-10;
+    position: absolute;
+}
+
+.login-forgot-password {
+    color: crimson;
+}
+
+.login-forgot-password:hover {
+    color: rgb(100, 100, 100);
+}
+
+.login-submit {
+    @extend .col-sm-offset-9, .col-md-offset-9, .col-lg-offset-9, .col-xs-12, .col-sm-3, .col-md-3, .col-lg-3;
+    position: absolute;
+    text-align: right;
+}
+
+.navbar-brand-corvette {
+    @extend .navbar-brand;
+    font-family: Corvette;
+    color: crimson !important;
+    font-size: .5em;
+}
+
+.navbar-dark {
+    @extend .navbar-default;
+    background-color: black !important;
+    color: crimson;
+    border: 1px solid crimson;
+}
+
+.modal-title-corvette {
+    @extend .modal-title;
+    font-family: Corvette;
+    color: crimson;
+    font-size: .8em
+}
+
+.input-group-register {
+    @extend .input-group-addon;
+    min-width: 110px;
+    max-width: 110px;
+}
+
+.forgot-password {
+    font-family: myriad;
+    color: white;
+    font-size: 1.1em
+}
+
+.forgot-password-subtitle {
+    @extend .forgot-password;
+    font-size: .8em;
+}
+

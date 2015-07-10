@@ -1,0 +1,11 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-dark">
+        <h1 class="title">{{event.Title}} Attendees</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="event.closeModal(event.attendeeModal)">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <member-list ng-controller="EventAttendeeCtrl as browseMembers"></member-list>
+    </ion-content>
+</ion-modal-view>

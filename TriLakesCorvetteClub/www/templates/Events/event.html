@@ -1,0 +1,38 @@
+<ion-view view-title="{{event.Title}}">
+    <ion-content>
+        <div class="list card">
+
+            <div class="item">
+                <p>{{event.Event.Address}}</p>
+                <p>{{event.Event.City}}, {{event.Event.State}} {{event.Event.Zip}}</p>
+                <p>{{event.Event.Date}}</p>
+            </div>
+
+            <div class="item item-body">
+                <p>
+                    {{event.Event.Description}}
+                </p>
+                <p>
+                    <a href="#" class="subdued">{{event.Event.NumberGoing}} <i class="icon ion-android-person"></i> Going</a>
+                </p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item"
+                   href="#"
+                   on-tap="event.openModal(event.attendeeModal)">
+                    <i class="icon ion-android-people"></i>
+                    Who's Going
+                </a>
+                <a class="tab-item"
+                   href="#"
+                   on-tap="event.Going = !event.Going">
+                    <i class="icon"
+                       ng-class="event.Going ? 'ion-android-checkbox-outline' : 'ion-android-checkbox-outline-blank'"></i>
+                    I'm Going
+                </a>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

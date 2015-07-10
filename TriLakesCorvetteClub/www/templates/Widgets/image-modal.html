@@ -1,0 +1,20 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-dark">
+        <h1 class="title">{{photo.Title}}'s Photos</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="photo.closeModal()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-slide-box on-slide-changed="slideHasChanged($index)"
+                       class="col-80 col-offset-10 text-center"
+                       does-continue="true"
+                       auto-play="false"
+                       show-pager="true"
+                       delegate-handle="photos">
+            <ion-slide ng-repeat="image in photo.Images track by $index">
+                <img ng-src="{{image.Img}}" />
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-modal-view>

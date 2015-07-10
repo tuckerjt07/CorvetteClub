@@ -1,0 +1,170 @@
+<div class="carbon-fiber-background">
+    <div class="modal-header">
+        <h3 class="modal-title-corvette">
+            Tri-Lakes Corvette Club
+            <br /><br />
+            <span class="register-title">Register</span>
+        </h3>
+    </div>
+    <div class="modal-body">
+        <form name="registerModal.forms">
+            <div class="input-group col-sm-11 col-md-11 col-lg-11"
+                 ng-class="{'has-error': {{registerModal.UsernameMaster}}}">
+                <span class="input-group-register" id="Username">Username</span>
+                <input type="text"
+                       name="Username"
+                       class="form-control"
+                       placeholder="Username"
+                       aria-describedby="Username"
+                       ng-model="registerModal.Username"
+                       ui-validate="{invalidChar: 'registerModal.validateUsername($value)',
+                                     invalidLength: 'registerModal.validateLength($value, \'Username\', [3, 20])'}"
+                       required
+                       ui-validate-async="{isUnique: 'registerModal.validateUnique($value)'}"
+                       ng-focus="registerModal.setFocus('Username')"
+                       ng-blur="registerModal.setBlur('Username')">
+                <div ng-show="{{registerModal.UsernameInvalidChar}}"
+                      class="text-danger">
+                    Only alphanumeric and the _ character are allowed.
+                </div>
+                <div ng-show="{{registerModal.UsernameInvalidLength}}"
+                      class="text-danger">
+                    Username must be between 3 and 20 chars.
+                </div>
+                <div ng-show="{{registerModal.UsernameNonUnique}}"
+                     class="text-danger">
+                    Username has already been taken.
+                </div>
+                <div ng-show="{{registerModal.UsernameRequired}}"
+                     class="text-danger">
+                    Username is required.
+                </div>
+            </div>
+            <div class="input-group col-sm-11 col-md-11 col-lg-11"
+                 ng-class="{'has-error': {{registerModal.PasswordMaster}}}">
+                <span class="input-group-register"
+                      id="Password">
+                    Password
+                </span>
+                <input type="password"
+                       name="Password"
+                       class="form-control"
+                       placeholder="Password"
+                       aria-describedby="Password"
+                       ng-model="registerModal.Password"
+                       ui-validate="{invalidLength: 'registerModal.validateLength($value, \'Password\', [7, 100])'}"
+                       required
+                       ng-focus="registerModal.setFocus('Password')"
+                       ng-blur="registerModal.setBlur('Password')">
+                <div ng-show="{{registerModal.PasswordInvalidLength}}"
+                     class="text-danger">
+                    Password must be at least seven characters long.
+                </div>
+                <div ng-show="{{registerModal.PasswordRequired}}"
+                     class="text-danger">
+                    Password is required.
+                </div>
+                <input type="password"
+                       name="ConfirmPassword"
+                       class="form-control"
+                       placeholder="Confirm Password"
+                       aria-describedby="Password"
+                       ng-model="registerModal.ConfirmPassword"
+                       ui-validate="{nonmatching: 'registerModal.comparePasswords($value)'}"
+                       required
+                       ng-focus="registerModal.setFocus('ConfirmPassword')"
+                       ng-blur="registerModal.setBlur('ConfirmPassword')">
+                <div ng-show="{{registerModal.PasswordNonMatching}}"
+                     class="text-danger">
+                    Passwords do not match.
+                </div>
+                <div ng-show="{{registerModal.ConfirmPasswordRequired}}"
+                     class="text-danger">
+                    Confirmation Password is required.
+                </div>
+            </div>
+            <div class="input-group col-sm-11 col-md-11 col-lg-11"
+                 ng-class="{'has-error' : {{registerModal.FirstNameMaster}}}">
+                <span class="input-group-register" id="FirstName">First Name</span>
+                <input type="text"
+                       name="FirstName"
+                       class="form-control"
+                       placeholder="First Name"
+                       aria-describedby="FirstName"
+                       ng-model="registerModal.FirstName"
+                       ui-validate="{invalidChar: 'registerModal.validateName($value, \'FirstName\')'}"
+                       ng-focus="registerModal.setFocus('FirstName')"
+                       ng-blur="registerModal.setBlur('FirstName')"
+                       required>
+                <div ng-show="{{registerModal.FirstNameInvalidChar}}"
+                     class="text-danger">
+                    Only alphabetic input is allowed.
+                </div>
+                <div ng-show="{{registerModal.FirstNameRequired}}"
+                     class="text-danger">
+                    First Name is required.
+                </div>
+            </div>
+            <div class="input-group col-sm-11 col-md-11 col-lg-11"
+                 ng-class="{'has-error' : {{registerModal.LastNameMaster}}}">
+                <span class="input-group-register" id="LastName">Last Name</span>
+                <input type="text"
+                       name="LastName"
+                       class="form-control"
+                       placeholder="Last Name"
+                       aria-describedby="LastName"
+                       ng-model="registerModal.LastName"
+                       ui-validate="{invalidChar: 'registerModal.validateName($value, \'LastName\')'}"
+                       ng-focus="registerModal.setFocus('LastName')"
+                       ng-blur="registerModal.setBlur('LastName')"
+                       required>
+                <div ng-show="{{registerModal.LastNameInvalidChar}}"
+                     class="text-danger">
+                    Only alphabetic input is allowed.
+                </div>
+                <div ng-show="{{registerModal.LastNameRequired}}"
+                     class="text-danger">
+                    Last Name is required.
+                </div>
+            </div>
+            <div class="input-group col-sm-11 col-md-11 col-lg-11"
+                 ng-class="{'has-error': {{registerModal.EmailAddressMaster}}}">
+                <span class="input-group-register" id="EmailAddress">Email Address</span>
+                <input type="email"
+                       name="EmailAddress"
+                       class="form-control"
+                       placeholder="Email Address"
+                       aria-describedby="EmailAddress"
+                       ng-model="registerModal.EmailAddress"
+                       ui-validate-async="{non-unique : 'registerModal.checkUniqueEmail($value)'}"
+                       ng-focus="registerModal.setFocus('EmailAddress')"
+                       ng-blur="registerModal.setBlur('EmailAddress')"
+                       required>
+                <div ng-show="{{registerModal.EmailAddressInvalid}}"
+                     class="text-danger">
+                    Please enter a valid email address.
+                </div>
+                <div ng-show="{{registerModal.EmailAddressNonUnique}}"
+                     class="text-danger">
+                    Sorry but this email address has already been used
+                </div>
+                <div ng-show="{{registerModal.EmailAddressRequired}}"
+                     class="text-danger">
+                    Email Address is required.
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <div class="col-sm-3 col-md-3 col-lg-3 pull-right">
+            <button class="btn btn-submit btn-block btn-lg"
+                    ng-click="registerModal.ok()"
+                    remove-modal>Register</button>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 pull-left">
+            <button class="btn btn-cancel btn-block btn-lg"
+                    ng-click="registerModal.cancel()"
+                    remove-modal>Cancel</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<ion-scroll delegate-handle="newsticker" style="height: 400px; margin-top: 80px;" ng-init="homeNewsTicker.scroll([true])">
+<div ng-repeat="newsItem in homeNewsTicker.newsfeed track by $index" class="padding col-100 text-center list card">
+    <a class="item" news-ticker="newsItem">{{newsItem.Title}}</a>
+</div>
+    <ion-infinite-scroll on-infinite="homeNewsTicker.recycleList()"
+                         spinner="none"
+                         icon="none"
+                         distance="1%">
+    </ion-infinite-scroll>
+</ion-scroll>

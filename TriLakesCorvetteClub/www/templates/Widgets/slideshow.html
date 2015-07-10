@@ -1,0 +1,15 @@
+<ion-slide-box on-slide-changed="slideHasChanged($index)"
+               class="col-80 col-offset-10 text-center"
+               does-continue="true"
+               auto-play="true"
+               slide-interval="5000"
+               show-pager="false"
+               delegate-handle="slideshow"
+               ng-show="slideshow.show">
+    <ion-slide ng-repeat="image in slideshow.Images track by $index"
+               ng-controller="PhotoModalCtrl as photo">
+        <img ng-src="{{image.Img}}"
+             on-tap="photo.launchModal(slideshow.Images, slideshow.Title, $index);"/>
+    </ion-slide>
+</ion-slide-box>
+
