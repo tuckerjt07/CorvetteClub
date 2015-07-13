@@ -2,7 +2,7 @@
 (function () {
     'use strict';
     angular.module('TriLakesCorvetteClub', ['ui.router', 'ui.utils', 'ngAnimate', 'CorvetteClub.launchpage.package', 'ui.bootstrap',
-                                            'smoothScroll', 'perfectParallax'])
+                                            'smoothScroll', 'perfectParallax', 'CorvetteClub.global.package'])
         .config(['$stateProvider', '$urlRouterProvider',
             function ($stateProvider, $urlRouterProvider) {
                 $urlRouterProvider.otherwise('/CorvetteClub/Home');

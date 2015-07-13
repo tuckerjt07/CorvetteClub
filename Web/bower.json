@@ -24,5 +24,8 @@
     "angular-ui-utils": "bower",
     "angular-bootstrap": "~0.13.0",
     "ngSmoothScroll": "~1.7.1"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.4"
   }
 }

@@ -1846,7 +1846,8 @@ blockquote .small:before {
 }
 
 .blockquote-reverse,
-blockquote.pull-right {
+blockquote.pull-right,
+.lauch-page-footer blockquote.copyright {
   padding-right: 15px;
   padding-left: 0;
   border-right: 5px solid #eeeeee;
@@ -1857,16 +1858,22 @@ blockquote.pull-right {
 .blockquote-reverse small:before,
 .blockquote-reverse .small:before,
 blockquote.pull-right footer:before,
+.lauch-page-footer blockquote.copyright footer:before,
 blockquote.pull-right small:before,
-blockquote.pull-right .small:before {
+.lauch-page-footer blockquote.copyright small:before,
+blockquote.pull-right .small:before,
+.lauch-page-footer blockquote.copyright .small:before {
   content: '';
 }
 .blockquote-reverse footer:after,
 .blockquote-reverse small:after,
 .blockquote-reverse .small:after,
 blockquote.pull-right footer:after,
+.lauch-page-footer blockquote.copyright footer:after,
 blockquote.pull-right small:after,
-blockquote.pull-right .small:after {
+.lauch-page-footer blockquote.copyright small:after,
+blockquote.pull-right .small:after,
+.lauch-page-footer blockquote.copyright .small:after {
   content: '\00A0 \2014';
 }
 
@@ -1988,7 +1995,7 @@ pre code {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .play-pause-container, .col-sm-3, .play-pause-container, .login-submit, .col-md-3, .play-pause-container, .login-submit, .col-lg-3, .login-submit, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .play-pause-container, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .about-club, .col-md-8, .about-club, .login-text, .col-lg-8, .about-club, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .login-text, .col-md-10, .col-lg-10, .login-text, .col-xs-11, .about-club-xs, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .login-text, .login-submit, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .play-pause-container, .col-sm-3, .play-pause-container, .login-submit, .col-md-3, .play-pause-container, .login-submit, .col-lg-3, .login-submit, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .play-pause-container, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .about-club, .col-md-8, .about-club, .login-text, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .login-text, .col-md-10, .col-lg-10, .login-text, .col-xs-11, .about-club-xs, .col-sm-11, .col-md-11, .col-lg-11, .about-club, .col-xs-12, .login-text, .login-submit, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -2622,7 +2629,7 @@ pre code {
   }
 }
 @media (min-width: 1200px) {
-  .col-lg-1, .col-lg-2, .col-lg-3, .login-submit, .col-lg-4, .play-pause-container, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .about-club, .col-lg-9, .col-lg-10, .login-text, .col-lg-11, .col-lg-12 {
+  .col-lg-1, .col-lg-2, .col-lg-3, .login-submit, .col-lg-4, .play-pause-container, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .login-text, .col-lg-11, .about-club, .col-lg-12 {
     float: left;
   }
 
@@ -2654,7 +2661,7 @@ pre code {
     width: 58.33333%;
   }
 
-  .col-lg-8, .about-club {
+  .col-lg-8 {
     width: 66.66667%;
   }
 
@@ -2666,7 +2673,7 @@ pre code {
     width: 83.33333%;
   }
 
-  .col-lg-11 {
+  .col-lg-11, .about-club {
     width: 91.66667%;
   }
 
@@ -4137,7 +4144,7 @@ tbody.collapse.in {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
 }
-.dropdown-menu.pull-right {
+.dropdown-menu.pull-right, .lauch-page-footer .dropdown-menu.copyright {
   right: 0;
   left: auto;
 }
@@ -4216,7 +4223,7 @@ tbody.collapse.in {
   z-index: 990;
 }
 
-.pull-right > .dropdown-menu {
+.pull-right > .dropdown-menu, .lauch-page-footer .copyright > .dropdown-menu {
   right: 0;
   left: auto;
 }
@@ -5879,7 +5886,8 @@ a.thumbnail.active {
 }
 
 .media-right,
-.media > .pull-right {
+.media > .pull-right,
+.lauch-page-footer .media > .copyright {
   padding-left: 10px;
 }
 
@@ -7197,7 +7205,7 @@ button.close {
   margin-right: auto;
 }
 
-.pull-right {
+.pull-right, .lauch-page-footer .copyright {
   float: right !important;
 }
 
@@ -7555,6 +7563,8 @@ body {
   max-width: 200px;
   position: absolute;
   z-index: 101;
+  bottom: 40px;
+  padding-left: 48px;
 }
 
 .media-control-container, .play-pause, .backward-forward {
@@ -7589,6 +7599,11 @@ body {
   position: absolute;
   top: 30px;
   padding-left: 10px;
+  color: crimson;
+  -webkit-text-fill-color: crimson;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .webpage-title-xs {
@@ -7607,7 +7622,7 @@ body {
 .about-club {
   font-family: Corvette;
   z-index: 101;
-  font-size: .6em;
+  font-size: .8em;
   color: crimson;
   position: absolute;
   bottom: 50px;
@@ -7652,6 +7667,39 @@ body {
   outline: rgba(100, 100, 100, 0.9) solid 5px;
 }
 
+.lauch-page-footer {
+  position: fixed;
+  font-family: Corvette;
+  height: 40px;
+  width: 100vw;
+  bottom: 0px;
+  padding-top: 10px;
+  background-color: black;
+}
+.lauch-page-footer .title {
+  color: white;
+  font-size: 0.6em;
+  padding-left: 15px;
+}
+.lauch-page-footer .space {
+  min-width: 40px;
+  display: inline-block;
+}
+.lauch-page-footer .link {
+  color: red;
+  font-size: 0.5em;
+}
+.lauch-page-footer .psuedo-anchor:hover {
+  text-decoration: underline;
+}
+.lauch-page-footer .copyright {
+  font-family: sans-serif;
+  color: white;
+  font-size: 1em;
+  padding-right: 15px;
+  padding-top: 3px;
+}
+
 .login-title {
   font-family: Corvette;
   color: white;
@@ -7675,6 +7723,11 @@ body {
   color: #646464;
 }
 
+.login-forgot-password:focus {
+  color: #646464;
+  outline: none;
+}
+
 .login-submit {
   position: absolute;
   text-align: right;
@@ -7683,7 +7736,7 @@ body {
 .navbar-brand-corvette {
   font-family: Corvette;
   color: crimson !important;
-  font-size: .5em;
+  font-size: .3em;
 }
 
 .navbar-dark {

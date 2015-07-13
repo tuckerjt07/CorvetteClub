@@ -23,6 +23,13 @@
     }
 }
 
+@mixin text-stroke($fallbackColor, $fillColor, $strokeWidth, $strokeColor) {
+    color: $fallbackColor;
+    -webkit-text-fill-color: $fillColor; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: $strokeWidth;
+    -webkit-text-stroke-color: $strokeColor;
+}
+
 //Add fonts
 @font-face {
     font-family: Corvette;
@@ -69,6 +76,8 @@ body {
     max-width: 200px;
     position: absolute;
     z-index: 101;
+    bottom: 40px;
+    padding-left: 48px;
 }
 
 .media-control-container {
@@ -106,6 +115,7 @@ body {
     position: absolute;
     top: 30px;
     padding-left: 10px;
+    @include text-stroke(crimson, crimson, 1px, black);
 }
 
 .webpage-title-xs {
@@ -123,10 +133,10 @@ body {
 }
 
 .about-club {
-    @extend .col-sm-8, .col-md-8, .col-lg-8, .hidden-xs;
+    @extend .col-sm-8, .col-md-8, .col-lg-11, .hidden-xs;
     font-family: Corvette;
     z-index: 101;
-    font-size: .6em;
+    font-size: .8em;
     color: crimson;
     position: absolute;
     bottom: 50px;
@@ -158,6 +168,42 @@ body {
     padding-top: 4px;
 }
 
+.lauch-page-footer {
+    position: fixed;
+    font-family: Corvette;
+    height: 40px;
+    width: 100vw;
+    bottom: 0px;
+    padding-top: 10px;
+    background-color: black;
+    .title {
+        color: white;
+        font-size: 0.6em;
+        padding-left: 15px;
+    }
+    .space {
+        min-width: 40px;
+        display: inline-block;
+    }
+    .link {
+        color: red;
+        font-size: 0.5em;
+    }
+    .psuedo-anchor {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .copyright {
+        @extend .pull-right;
+        font-family: sans-serif;
+        color: white;
+        font-size: 1em;
+        padding-right: 15px;
+        padding-top: 3px;
+    }
+}
+
 .login-title {
     @extend .col-sm-offset-2, .col-md-offset-2, .col-lg-offset-1;
     font-family: Corvette;
@@ -184,6 +230,11 @@ body {
     color: rgb(100, 100, 100);
 }
 
+.login-forgot-password:focus {
+    color: rgb(100, 100, 100);
+    outline: none;
+}
+
 .login-submit {
     @extend .col-sm-offset-9, .col-md-offset-9, .col-lg-offset-9, .col-xs-12, .col-sm-3, .col-md-3, .col-lg-3;
     position: absolute;
@@ -194,7 +245,7 @@ body {
     @extend .navbar-brand;
     font-family: Corvette;
     color: crimson !important;
-    font-size: .5em;
+    font-size: .3em;
 }
 
 .navbar-dark {

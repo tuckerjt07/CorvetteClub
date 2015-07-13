@@ -23,8 +23,14 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-include-source": "^0.6.0",
     "grunt-jscs": "^1.8.0",
+    "grunt-karma": "^0.11.2",
     "grunt-open": "^0.2.3",
     "grunt-processhtml": "^0.3.8",
-    "grunt-wiredep": "^2.0.0"
+    "grunt-wiredep": "^2.0.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.37",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "phantomjs": "^1.9.17"
   }
 }

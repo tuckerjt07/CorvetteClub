@@ -2,8 +2,8 @@
 (function () {
     'use strict';
     angular.module('CorvetteClub.launchpage.controller', [])
-        .controller('LaunchPageCtrl', ['$interval', '$modal', 'LaunchPageImages',
-                                       function ($interval, $modal, LaunchPageImages) {
+        .controller('LaunchPageCtrl', ['$interval', '$modal', 'LaunchPageImages', 'LaunchPageFooter',
+                                       function ($interval, $modal, LaunchPageImages, LaunchPageFooter) {
                 //Create a global this
                 var launchPage;
                 launchPage = this;
@@ -13,6 +13,7 @@
                 launchPage.play = true;
                 launchPage.playPauseTooltip = 'Pause Slideshow';
                 launchPage.navBarCollapsed = true;
+                launchPage.footer = LaunchPageFooter;
                 launchPage.setCurrentSlideIndex = function (index) {
                     launchPage.currentIndex = index;
                 };
@@ -29,6 +30,7 @@
                         modal: 'lg'
                     });
                     modalInstance.result.then(function (object) {
+                        alert(object);
                         launchPage.registerObject = object;
                     }, function () {
                         console.log('Closed');
@@ -44,7 +46,7 @@
                         modal: 'lg'
                     });
                     modalInstance.result.then(function (object) {
-                        alert('Here');
+                        alert(object);
                         launchPage.passwordRetrievalEmailAddress = object;
                     }, function () {
                         //Call factory here

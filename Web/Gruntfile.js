@@ -57,7 +57,7 @@ module.exports = function(grunt) {
                 }
             },
             html: {
-                files: '**/*.html',
+                files: ['templates/**/*.html'],
                 tasks: ['include'],
                 options: {
                     livereload: true
@@ -117,6 +117,12 @@ module.exports = function(grunt) {
                     // https://github.com/taptapship/wiredep#configuration
                 }
             }
+        },
+        karma: {
+            unit: {
+                configFile: 'conf.js',
+                autoWatch: true
+            }
         }
     });
     // Load the plugin that provides the "uglify" task.
@@ -137,6 +143,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-processhtml');
     //Load the plugin that provides the "wiredep" task
     grunt.loadNpmTasks('grunt-wiredep');
+    //Load the plugin that provides the "karma" task
+    grunt.loadNpmTasks('grunt-karma');
     // Include task(s).
     grunt.registerTask('include', ['includeSource']);
     grunt.registerTask('watchTask', ['watch']);
@@ -145,6 +153,7 @@ module.exports = function(grunt) {
     grunt.registerTask('launchServer', ['open', 'connect']);
     grunt.registerTask('openBrowser', ['open']);
     grunt.registerTask('wire', ['wiredep']);
+    grunt.registerTask('test', ['karma']);
     grunt.registerTask('develop', ['jscs', 'includeSource', 'wiredep', 'sass:dev', 'launchServer', 'watch']);
     grunt.registerTask('production', ['uglify', 'includeSource', 'wiredep', 'sass', 'launchServer', 'watch']);
 };

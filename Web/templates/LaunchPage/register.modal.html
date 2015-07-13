@@ -6,8 +6,10 @@
             <span class="register-title">Register</span>
         </h3>
     </div>
-    <div class="modal-body">
-        <form name="registerModal.forms">
+    <form name="registerModal.forms"
+          ng-submit="registerModal.ok(registerModal.forms)"
+          novalidate>
+        <div class="modal-body">
             <div class="input-group col-sm-11 col-md-11 col-lg-11"
                  ng-class="{'has-error': {{registerModal.UsernameMaster}}}">
                 <span class="input-group-register" id="Username">Username</span>
@@ -18,11 +20,10 @@
                        aria-describedby="Username"
                        ng-model="registerModal.Username"
                        ui-validate="{invalidChar: 'registerModal.validateUsername($value)',
-                                     invalidLength: 'registerModal.validateLength($value, \'Username\', [3, 20])'}"
+                                     invalidLength: 'registerModal.validateLength($value, \'Username\', [{{registerModal.UsernameCharsMin}}, {{registerModal.UsernameCharsMax}}])'}"
                        required
                        ui-validate-async="{isUnique: 'registerModal.validateUnique($value)'}"
-                       ng-focus="registerModal.setFocus('Username')"
-                       ng-blur="registerModal.setBlur('Username')">
+                       auto-focus>
                 <div ng-show="{{registerModal.UsernameInvalidChar}}"
                       class="text-danger">
                     Only alphanumeric and the _ character are allowed.
@@ -39,6 +40,11 @@
                      class="text-danger">
                     Username is required.
                 </div>
+                <span class="input-group-addon"
+                      ng-class="{'has-error': {{registerModal.UsernameInvalidLength}}}"
+                      style="min-width: 60px;">
+                    {{registerModal.UsernameCharsEntered}}/{{registerModal.UsernameCharsMax}}
+                </span>
             </div>
             <div class="input-group col-sm-11 col-md-11 col-lg-11"
                  ng-class="{'has-error': {{registerModal.PasswordMaster}}}">
@@ -52,10 +58,10 @@
                        placeholder="Password"
                        aria-describedby="Password"
                        ng-model="registerModal.Password"
+                       ng-change="registerModal.UpdatePasswordLength($value)"
                        ui-validate="{invalidLength: 'registerModal.validateLength($value, \'Password\', [7, 100])'}"
                        required
-                       ng-focus="registerModal.setFocus('Password')"
-                       ng-blur="registerModal.setBlur('Password')">
+                       auto-focus>
                 <div ng-show="{{registerModal.PasswordInvalidLength}}"
                      class="text-danger">
                     Password must be at least seven characters long.
@@ -72,8 +78,7 @@
                        ng-model="registerModal.ConfirmPassword"
                        ui-validate="{nonmatching: 'registerModal.comparePasswords($value)'}"
                        required
-                       ng-focus="registerModal.setFocus('ConfirmPassword')"
-                       ng-blur="registerModal.setBlur('ConfirmPassword')">
+                       auto-focus>
                 <div ng-show="{{registerModal.PasswordNonMatching}}"
                      class="text-danger">
                     Passwords do not match.
@@ -82,6 +87,11 @@
                      class="text-danger">
                     Confirmation Password is required.
                 </div>
+                <span class="input-group-addon"
+                      ng-class="{'has-error': {{registerModal.PasswordInvalidLength}}}"
+                      style="min-width: 60px;">
+                    {{registerModal.PasswordCharsEntered}}/{{registerModal.PasswordCharsMin}}
+                </span>
             </div>
             <div class="input-group col-sm-11 col-md-11 col-lg-11"
                  ng-class="{'has-error' : {{registerModal.FirstNameMaster}}}">
@@ -93,8 +103,7 @@
                        aria-describedby="FirstName"
                        ng-model="registerModal.FirstName"
                        ui-validate="{invalidChar: 'registerModal.validateName($value, \'FirstName\')'}"
-                       ng-focus="registerModal.setFocus('FirstName')"
-                       ng-blur="registerModal.setBlur('FirstName')"
+                       auto-focus
                        required>
                 <div ng-show="{{registerModal.FirstNameInvalidChar}}"
                      class="text-danger">
@@ -115,8 +124,7 @@
                        aria-describedby="LastName"
                        ng-model="registerModal.LastName"
                        ui-validate="{invalidChar: 'registerModal.validateName($value, \'LastName\')'}"
-                       ng-focus="registerModal.setFocus('LastName')"
-                       ng-blur="registerModal.setBlur('LastName')"
+                       auto-focus
                        required>
                 <div ng-show="{{registerModal.LastNameInvalidChar}}"
                      class="text-danger">
@@ -137,8 +145,7 @@
                        aria-describedby="EmailAddress"
                        ng-model="registerModal.EmailAddress"
                        ui-validate-async="{non-unique : 'registerModal.checkUniqueEmail($value)'}"
-                       ng-focus="registerModal.setFocus('EmailAddress')"
-                       ng-blur="registerModal.setBlur('EmailAddress')"
+                       auto-focus
                        required>
                 <div ng-show="{{registerModal.EmailAddressInvalid}}"
                      class="text-danger">
@@ -153,18 +160,19 @@
                     Email Address is required.
                 </div>
             </div>
-        </form>
-    </div>
-    <div class="modal-footer">
-        <div class="col-sm-3 col-md-3 col-lg-3 pull-right">
-            <button class="btn btn-submit btn-block btn-lg"
-                    ng-click="registerModal.ok()"
-                    remove-modal>Register</button>
         </div>
-        <div class="col-sm-3 col-md-3 col-lg-3 pull-left">
-            <button class="btn btn-cancel btn-block btn-lg"
-                    ng-click="registerModal.cancel()"
-                    remove-modal>Cancel</button>
+        <div class="modal-footer">
+            <div class="col-sm-3 col-md-3 col-lg-3 pull-right">
+                <button class="btn btn-submit btn-block btn-lg"
+                        type="submit">
+                    Register
+                </button>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3 pull-left">
+                <button class="btn btn-cancel btn-block btn-lg"
+                        ng-click="registerModal.cancel()"
+                        remove-modal>Cancel</button>
+            </div>
         </div>
-    </div>
+    </form>
 </div>

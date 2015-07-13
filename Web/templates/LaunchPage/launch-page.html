@@ -15,7 +15,7 @@
         </div>
         </p>
     </div>
-    <nav class="navbar navbar-dark hidden-sm hidden-md hidden-lg navbar-fixed-top">
+    <nav class="navbar navbar-dark hidden-sm hidden-md hidden-lg navbar-fixed-top col-xs-12">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -62,27 +62,26 @@
        perfect-parallax parallax-ratio="0.9" parallax-css="bottom" parallax-init-val="180">
         Welcome to the online garage of the Tri-Lakes Corvette Club
     </p>
-</div>
-<div id="login" class="full-screen carbon-fiber-background"
-     perfect-parallax parallax-ratio=".5" parallax-css="background-position-y" parallax-init-val="-100">
-    <div class="login-title"
-         perfect-parallax parallax-ratio="1.2" parallax-css="top" parallax-init-val="-65">
-        Login
-    </div>
-    <div class="input-group login-text"
-         perfect-parallax parallax-ratio="0.7" parallax-css="bottom" parallax-init-val="-800">>
-        <input type="text" class="form-control" placeholder="Username">
-        <input type="password" class="form-control" placeholder="Password">
-        <br />
-        <a href=""
-           class="pull-right login-forgot-password"
-           ng-click="launchPage.forgotPassword()">Forgot Password?</a>
-    </div>
-    <div class="login-submit"
-         perfect-parallax parallax-ratio="0.9" parallax-css="bottom" parallax-init-val="-1030">
-        <button type="button"
-                class="btn btn-submit btn-lg btn-block col-lg-12">
-            Login
-        </button>
+    <div class="lauch-page-footer">
+        <span class="title">Tri-Lakes Corvette Club</span>
+        <span class="space"></span>
+        <span>
+            <span add-pointer login-scroll class="link psuedo-anchor">Login</span>
+        </span>
+        <span class="space"></span>
+        <span>
+            <span add-pointer class="link psuedo-anchor" ng-click="launchPage.open();">Register</span>
+        </span>
+        <span class="space"></span>
+        <span>
+            <a href="#" class="link">About</a>
+        </span>
+        <span class="space"></span>
+        <span>
+            <a href="mailto:tri-lakescorvetteclub@gmail.com?Subject=Club%20Inquiry" class="link">Contact</a>
+        </span>
+        <span class="space"></span>
+        <span class="copyright">&copy; Jacob Tucker Designs</span>
     </div>
 </div>
+<login></login>
