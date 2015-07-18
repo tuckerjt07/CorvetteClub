@@ -21,9 +21,10 @@
     "bootstrap-sass-official": "~3.3.5",
     "gsap": "~1.17.0",
     "angular-animate": "~1.4.1",
-    "angular-ui-utils": "bower",
     "angular-bootstrap": "~0.13.0",
-    "ngSmoothScroll": "~1.7.1"
+    "ngSmoothScroll": "~1.7.1",
+    "angular-ui-utils": "bower",
+    "angular-ui-validate": "~1.1.0"
   },
   "devDependencies": {
     "jquery": "~2.1.4"

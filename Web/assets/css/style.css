@@ -1995,14 +1995,14 @@ pre code {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .play-pause-container, .col-sm-3, .play-pause-container, .login-submit, .col-md-3, .play-pause-container, .login-submit, .col-lg-3, .login-submit, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .play-pause-container, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .about-club, .col-md-8, .about-club, .login-text, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .login-text, .col-md-10, .col-lg-10, .login-text, .col-xs-11, .about-club-xs, .col-sm-11, .col-md-11, .col-lg-11, .about-club, .col-xs-12, .login-text, .login-submit, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .play-pause-container, .col-sm-3, .play-pause-container, .login-submit, .col-md-3, .play-pause-container, .login-submit, .col-lg-3, .login-submit, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .play-pause-container, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .about-club, .col-md-8, .about-club, .login-text, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .login-text, .about-text, .col-md-10, .about-text, .col-lg-10, .login-text, .about-text, .col-xs-11, .about-club-xs, .col-sm-11, .col-md-11, .col-lg-11, .about-club, .col-xs-12, .login-text, .login-submit, .about-text, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .play-pause-container, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .about-club-xs, .col-xs-12, .login-text, .login-submit {
+.col-xs-1, .col-xs-2, .col-xs-3, .play-pause-container, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .about-club-xs, .col-xs-12, .login-text, .login-submit, .about-text {
   float: left;
 }
 
@@ -2050,7 +2050,7 @@ pre code {
   width: 91.66667%;
 }
 
-.col-xs-12, .login-text, .login-submit {
+.col-xs-12, .login-text, .login-submit, .about-text {
   width: 100%;
 }
 
@@ -2211,7 +2211,7 @@ pre code {
 }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .play-pause-container, .login-submit, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .about-club, .col-sm-9, .col-sm-10, .login-text, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, .col-sm-3, .play-pause-container, .login-submit, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .about-club, .col-sm-9, .col-sm-10, .login-text, .about-text, .col-sm-11, .col-sm-12 {
     float: left;
   }
 
@@ -2251,7 +2251,7 @@ pre code {
     width: 75%;
   }
 
-  .col-sm-10, .login-text {
+  .col-sm-10, .login-text, .about-text {
     width: 83.33333%;
   }
 
@@ -2371,11 +2371,11 @@ pre code {
     margin-left: 0%;
   }
 
-  .col-sm-offset-1, .register-title, .login-text {
+  .col-sm-offset-1, .register-title, .login-text, .about-text {
     margin-left: 8.33333%;
   }
 
-  .col-sm-offset-2, .login-title {
+  .col-sm-offset-2, .login-title, .about-title {
     margin-left: 16.66667%;
   }
 
@@ -2420,7 +2420,7 @@ pre code {
   }
 }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .play-pause-container, .login-submit, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .about-club, .login-text, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .play-pause-container, .login-submit, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .about-club, .login-text, .col-md-9, .col-md-10, .about-text, .col-md-11, .col-md-12 {
     float: left;
   }
 
@@ -2460,7 +2460,7 @@ pre code {
     width: 75%;
   }
 
-  .col-md-10 {
+  .col-md-10, .about-text {
     width: 83.33333%;
   }
 
@@ -2580,11 +2580,11 @@ pre code {
     margin-left: 0%;
   }
 
-  .col-md-offset-1, .register-title {
+  .col-md-offset-1, .register-title, .about-text {
     margin-left: 8.33333%;
   }
 
-  .col-md-offset-2, .login-title, .login-text {
+  .col-md-offset-2, .login-title, .about-title, .login-text {
     margin-left: 16.66667%;
   }
 
@@ -2629,7 +2629,7 @@ pre code {
   }
 }
 @media (min-width: 1200px) {
-  .col-lg-1, .col-lg-2, .col-lg-3, .login-submit, .col-lg-4, .play-pause-container, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .login-text, .col-lg-11, .about-club, .col-lg-12 {
+  .col-lg-1, .col-lg-2, .col-lg-3, .login-submit, .col-lg-4, .play-pause-container, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .login-text, .about-text, .col-lg-11, .about-club, .col-lg-12 {
     float: left;
   }
 
@@ -2669,7 +2669,7 @@ pre code {
     width: 75%;
   }
 
-  .col-lg-10, .login-text {
+  .col-lg-10, .login-text, .about-text {
     width: 83.33333%;
   }
 
@@ -2789,7 +2789,7 @@ pre code {
     margin-left: 0%;
   }
 
-  .col-lg-offset-1, .login-title, .register-title, .login-text {
+  .col-lg-offset-1, .login-title, .about-title, .register-title, .login-text, .about-text {
     margin-left: 8.33333%;
   }
 
@@ -4951,21 +4951,21 @@ tbody.collapse.in {
   border-width: 1px 0 0;
 }
 
-.navbar-brand, .navbar-brand-corvette {
+.navbar-brand, .navbar-brand-corvette, .navbar-brand-authorized {
   float: left;
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
   height: 50px;
 }
-.navbar-brand:hover, .navbar-brand-corvette:hover, .navbar-brand:focus, .navbar-brand-corvette:focus {
+.navbar-brand:hover, .navbar-brand-corvette:hover, .navbar-brand-authorized:hover, .navbar-brand:focus, .navbar-brand-corvette:focus, .navbar-brand-authorized:focus {
   text-decoration: none;
 }
-.navbar-brand > img, .navbar-brand-corvette > img {
+.navbar-brand > img, .navbar-brand-corvette > img, .navbar-brand-authorized > img {
   display: block;
 }
 @media (min-width: 768px) {
-  .navbar > .container .navbar-brand, .navbar > .container .navbar-brand-corvette, .navbar > .container-fluid .navbar-brand, .navbar > .container-fluid .navbar-brand-corvette {
+  .navbar > .container .navbar-brand, .navbar > .container .navbar-brand-corvette, .navbar > .container .navbar-brand-authorized, .navbar > .container-fluid .navbar-brand, .navbar > .container-fluid .navbar-brand-corvette, .navbar > .container-fluid .navbar-brand-authorized {
     margin-left: -15px;
   }
 }
@@ -5181,10 +5181,10 @@ tbody.collapse.in {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
 }
-.navbar-default .navbar-brand, .navbar-dark .navbar-brand, .navbar-default .navbar-brand-corvette, .navbar-dark .navbar-brand-corvette {
+.navbar-default .navbar-brand, .navbar-dark .navbar-brand, .navbar-default .navbar-brand-corvette, .navbar-dark .navbar-brand-corvette, .navbar-default .navbar-brand-authorized, .navbar-dark .navbar-brand-authorized {
   color: #777;
 }
-.navbar-default .navbar-brand:hover, .navbar-dark .navbar-brand:hover, .navbar-default .navbar-brand-corvette:hover, .navbar-dark .navbar-brand-corvette:hover, .navbar-default .navbar-brand:focus, .navbar-dark .navbar-brand:focus, .navbar-default .navbar-brand-corvette:focus, .navbar-dark .navbar-brand-corvette:focus {
+.navbar-default .navbar-brand:hover, .navbar-dark .navbar-brand:hover, .navbar-default .navbar-brand-corvette:hover, .navbar-dark .navbar-brand-corvette:hover, .navbar-default .navbar-brand-authorized:hover, .navbar-dark .navbar-brand-authorized:hover, .navbar-default .navbar-brand:focus, .navbar-dark .navbar-brand:focus, .navbar-default .navbar-brand-corvette:focus, .navbar-dark .navbar-brand-corvette:focus, .navbar-default .navbar-brand-authorized:focus, .navbar-dark .navbar-brand-authorized:focus {
   color: #5e5e5e;
   background-color: transparent;
 }
@@ -5261,10 +5261,10 @@ tbody.collapse.in {
   background-color: #222;
   border-color: #090909;
 }
-.navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand-corvette {
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand-corvette, .navbar-inverse .navbar-brand-authorized {
   color: #9d9d9d;
 }
-.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand-corvette:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand-corvette:focus {
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand-corvette:hover, .navbar-inverse .navbar-brand-authorized:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand-corvette:focus, .navbar-inverse .navbar-brand-authorized:focus {
   color: #fff;
   background-color: transparent;
 }
@@ -7116,7 +7116,7 @@ button.close {
   content: '\203a';
 }
 
-.carousel-indicators {
+.carousel-indicators, .carousel-indicators-custom {
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -7127,7 +7127,7 @@ button.close {
   list-style: none;
   text-align: center;
 }
-.carousel-indicators li {
+.carousel-indicators li, .carousel-indicators-custom li {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -7139,14 +7139,14 @@ button.close {
   background-color: #000 \9;
   background-color: transparent;
 }
-.carousel-indicators .active {
+.carousel-indicators .active, .carousel-indicators-custom .active {
   margin: 0;
   width: 12px;
   height: 12px;
   background-color: #fff;
 }
 
-.carousel-caption {
+.carousel-caption, .carousel-caption-custom {
   position: absolute;
   left: 15%;
   right: 15%;
@@ -7158,7 +7158,7 @@ button.close {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
-.carousel-caption .btn, .carousel-caption .btn-submit, .carousel-caption .btn-cancel, .carousel-caption .home-action-button {
+.carousel-caption .btn, .carousel-caption-custom .btn, .carousel-caption .btn-submit, .carousel-caption-custom .btn-submit, .carousel-caption .btn-cancel, .carousel-caption-custom .btn-cancel, .carousel-caption .home-action-button, .carousel-caption-custom .home-action-button {
   text-shadow: none;
 }
 
@@ -7181,13 +7181,13 @@ button.close {
     margin-right: -15px;
   }
 
-  .carousel-caption {
+  .carousel-caption, .carousel-caption-custom {
     left: 20%;
     right: 20%;
     padding-bottom: 30px;
   }
 
-  .carousel-indicators {
+  .carousel-indicators, .carousel-indicators-custom {
     bottom: 20px;
   }
 }
@@ -7503,24 +7503,25 @@ body {
 
 .carbon-fiber-background {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+");
+  z-index: 0;
 }
 
 .btn-submit {
-  border: 1px solid crimson;
-  color: crimson;
+  border: 1px solid #a70209;
+  color: #a70209;
   background: rgba(0, 0, 0, 0.8);
   display: inline-block;
   text-align: center;
   font-size: 1.1em;
 }
 .btn-submit:hover, .btn-submit:active, .btn-submit:active:hover {
-  border: 1px solid crimson;
+  border: 1px solid #a70209;
   background: rgba(100, 100, 100, 0.8);
-  color: crimson;
+  color: #a70209;
 }
 .btn-submit:focus, .btn-submit:active:focus, .btn-submit.active:focus, .btn-submit.focus, .btn-submit:active.focus, .btn-submit.active.focus {
   border: rgba(100, 100, 100, 0.8);
-  color: crimson;
+  color: #a70209;
   outline: rgba(220, 20, 60, 0.4) solid thick;
 }
 
@@ -7554,6 +7555,19 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 50;
+}
+
+.slideshow-img {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.slideshow-edge {
+  z-index: 60;
+  height: 250px;
 }
 
 .play-pause-container {
@@ -7594,13 +7608,13 @@ body {
 .webpage-title {
   font-family: Corvette;
   z-index: 101;
-  color: crimson;
+  color: #a70209;
   font-size: 1.4em;
   position: absolute;
   top: 30px;
   padding-left: 10px;
-  color: crimson;
-  -webkit-text-fill-color: crimson;
+  color: #a70209;
+  -webkit-text-fill-color: #a70209;
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -7609,7 +7623,7 @@ body {
 .webpage-title-xs {
   font-family: Corvette;
   z-index: 101;
-  color: crimson;
+  color: #a70209;
   font-size: .6em;
   position: absolute;
   top: 10px;
@@ -7623,7 +7637,7 @@ body {
   font-family: Corvette;
   z-index: 101;
   font-size: .8em;
-  color: crimson;
+  color: #a70209;
   position: absolute;
   bottom: 50px;
 }
@@ -7631,7 +7645,7 @@ body {
 .about-club-xs {
   font-family: Corvette;
   z-index: 101;
-  color: crimson;
+  color: #a70209;
   font-size: .4em;
   position: absolute;
 }
@@ -7644,8 +7658,8 @@ body {
 }
 
 .home-action-button {
-  border: 1px solid crimson;
-  color: crimson;
+  border: 1px solid #a70209;
+  color: #a70209;
   background: rgba(0, 0, 0, 0.8);
   display: inline-block;
   text-align: center;
@@ -7657,13 +7671,13 @@ body {
   padding-top: 4px;
 }
 .home-action-button:hover, .home-action-button:active, .home-action-button:active:hover {
-  border: 1px solid crimson;
+  border: 1px solid #a70209;
   background: rgba(100, 100, 100, 0.8);
-  color: crimson;
+  color: #a70209;
 }
 .home-action-button:focus, .home-action-button:active:focus, .home-action-button.active:focus, .home-action-button.focus, .home-action-button:active.focus, .home-action-button.active.focus {
   border: rgba(100, 100, 100, 0.8);
-  color: crimson;
+  color: #a70209;
   outline: rgba(100, 100, 100, 0.9) solid 5px;
 }
 
@@ -7674,6 +7688,7 @@ body {
   width: 100vw;
   bottom: 0px;
   padding-top: 10px;
+  z-index: 50;
   background-color: black;
 }
 .lauch-page-footer .title {
@@ -7700,10 +7715,11 @@ body {
   padding-top: 3px;
 }
 
-.login-title {
+.login-title, .about-title {
   font-family: Corvette;
   color: white;
   font-size: 1.4em;
+  z-index: 20;
   position: absolute;
 }
 
@@ -7716,15 +7732,15 @@ body {
 }
 
 .login-forgot-password {
-  color: crimson;
+  color: #a70209;
 }
 
 .login-forgot-password:hover {
-  color: #646464;
+  color: #514954;
 }
 
 .login-forgot-password:focus {
-  color: #646464;
+  color: #514954;
   outline: none;
 }
 
@@ -7733,21 +7749,33 @@ body {
   text-align: right;
 }
 
+.about-text {
+  font-family: myraid-pro;
+  color: white;
+  position: absolute;
+}
+
 .navbar-brand-corvette {
   font-family: Corvette;
-  color: crimson !important;
+  color: #a70209 !important;
   font-size: .3em;
+}
+
+.navbar-brand-authorized {
+  font-family: Corvette;
+  color: #a70209 !important;
+  font-size: .6em;
 }
 
 .navbar-dark {
   background-color: black !important;
-  color: crimson;
-  border: 1px solid crimson;
+  color: #a70209;
+  border: 1px solid #a70209;
 }
 
 .modal-title-corvette {
   font-family: Corvette;
-  color: crimson;
+  color: #a70209;
   font-size: 0.8em;
 }
 
@@ -7764,6 +7792,78 @@ body {
 
 .forgot-password-subtitle {
   font-size: .8em;
+}
+
+.navbar-user {
+  color: #a70209 !important;
+}
+
+.carousel-caption-custom {
+  bottom-padding: 0px;
+  bottom: -20px;
+  color: #ff830b;
+}
+
+.carousel-indicators-custom {
+  bottom: -80px !important;
+}
+
+.carousel-active {
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: #514954;
+}
+
+.navbar-dark .navbar-nav li a {
+  color: #514954;
+}
+
+.navbar-dark .navbar-text {
+  color: #514954;
+}
+
+.carousel-control.left {
+  left: 10%;
+  top: -10%;
+  color: #514954;
+}
+.carousel-control.left span {
+  cursor: pointer;
+}
+
+.carousel-control.right {
+  right: 10%;
+  top: -10%;
+  color: #514954;
+}
+.carousel-control.right span {
+  cursor: pointer;
+}
+
+.club-events-home {
+  background-color: black;
+  padding: 15px;
+  min-width: 100%;
+}
+.club-events-home .header {
+  background-color: black;
+  color: #a70209;
+  text-align: center;
+  font-family: Corvette;
+  font-size: 0.6em;
+}
+
+.club-feed-home {
+  background-color: black;
+  padding: 15px;
+  min-width: 100%;
+}
+.club-feed-home .header {
+  background-color: black;
+  color: #a70209;
+  text-align: center;
+  font-family: Corvette;
+  font-size: 0.6em;
 }
 
 /*# sourceMappingURL=style.css.map */

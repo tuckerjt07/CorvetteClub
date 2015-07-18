@@ -2,8 +2,8 @@
 (function () {
     'use strict';
     angular.module('CorvetteClub.launchpage.controller', [])
-        .controller('LaunchPageCtrl', ['$interval', '$modal', 'LaunchPageImages', 'LaunchPageFooter',
-                                       function ($interval, $modal, LaunchPageImages, LaunchPageFooter) {
+        .controller('LaunchPageCtrl', ['$interval', '$state', '$modal', 'LaunchPageImages', 'LaunchPageFooter',
+                                       function ($interval, $state, $modal, LaunchPageImages, LaunchPageFooter) {
                 //Create a global this
                 var launchPage;
                 launchPage = this;
@@ -72,5 +72,8 @@
                         launchPage.nextSlide();
                     }
                 }, 6000);
+                launchPage.login = function () {
+                    $state.go('app.authorized.home');
+                };
         }]);
 }());

@@ -1,7 +1,9 @@
 //Modify Colors Here
 @import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 //Add variables
-
+$corvette-red: #a70209 !default;
+$corvette-orange: #ff830b !default;
+$corvette-grey: #514954 !default;
 //Create mixins
 @mixin custom-button($border, $color, $background, $display, $text-align, $font-size, $primary-border, $primary-background, $primary-color, $secondary-background, $secondary-color, $secondary-outline) {
     @extend .btn;
@@ -30,6 +32,19 @@
     -webkit-text-stroke-color: $strokeColor;
 }
 
+@mixin home-page-side-widget {
+    background-color: black;
+    padding: 15px;
+    min-width: 100%;
+    .header {
+        background-color: black;
+        color: $corvette-red;
+        text-align: center;
+        font-family: Corvette;
+        font-size: 0.6em;
+    }
+}
+
 //Add fonts
 @font-face {
     font-family: Corvette;
@@ -44,10 +59,11 @@ body {
 //Make classes here
 .carbon-fiber-background {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+");
+    z-index: 0;
 }
 
 .btn-submit {
-    @include custom-button (1px solid crimson, crimson, rgba(0,0,0,0.8), inline-block, center, 1.1em, 1px solid crimson, rgba(100, 100, 100, 0.8), crimson, rgba(100,100,100,0.8), crimson, rgba(220,20,60,0.4) solid thick);
+    @include custom-button (1px solid $corvette-red, $corvette-red, rgba(0,0,0,0.8), inline-block, center, 1.1em, 1px solid $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(100,100,100,0.8), $corvette-red, rgba(220,20,60,0.4) solid thick);
 }
 
 .btn-cancel {
@@ -66,6 +82,19 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 50;
+}
+
+.slideshow-img {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.slideshow-edge {
+    z-index: 60;
+    height: 250px;
 }
 
 .play-pause-container {
@@ -110,19 +139,19 @@ body {
     @extend .hidden-xs;
     font-family: Corvette;
     z-index: 101;
-    color: crimson;
+    color: $corvette-red;
     font-size: 1.4em;
     position: absolute;
     top: 30px;
     padding-left: 10px;
-    @include text-stroke(crimson, crimson, 1px, black);
+    @include text-stroke($corvette-red, $corvette-red, 1px, black);
 }
 
 .webpage-title-xs {
     @extend .hidden-sm, .hidden-md, .hidden-lg;
     font-family: Corvette;
     z-index: 101;
-    color: crimson;
+    color: $corvette-red;
     font-size: .6em;
     position: absolute;
     top: 10px;
@@ -137,7 +166,7 @@ body {
     font-family: Corvette;
     z-index: 101;
     font-size: .8em;
-    color: crimson;
+    color: $corvette-red;
     position: absolute;
     bottom: 50px;
 }
@@ -146,7 +175,7 @@ body {
     @extend .col-xs-11, .hidden-sm, .hidden-md, .hidden-lg;
     font-family: Corvette;
     z-index: 101;
-    color: crimson;
+    color: $corvette-red;
     font-size: .4em;
     position: absolute;
 }
@@ -160,7 +189,7 @@ body {
 }
 
 .home-action-button {
-    @include custom-button (1px solid crimson, crimson, rgba(0,0,0,0.8), inline-block, center, 1.1em, 1px solid crimson, rgba(100, 100, 100, 0.8), crimson, rgba(100,100,100,0.8), crimson, rgba(100, 100,100,0.9) solid 5px);
+    @include custom-button (1px solid $corvette-red, $corvette-red, rgba(0,0,0,0.8), inline-block, center, 1.1em, 1px solid $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(100,100,100,0.8), $corvette-red, rgba(100, 100,100,0.9) solid 5px);
     min-width: 120px;
     min-height: 30px;
     cursor: pointer;
@@ -175,6 +204,7 @@ body {
     width: 100vw;
     bottom: 0px;
     padding-top: 10px;
+    z-index: 50;
     background-color: black;
     .title {
         color: white;
@@ -209,6 +239,7 @@ body {
     font-family: Corvette;
     color: white;
     font-size: 1.4em;
+    z-index: 20;
     position: absolute;
 }
 
@@ -217,21 +248,25 @@ body {
     color: white;
 }
 
+.about-title {
+    @extend .login-title;
+}
+
 .login-text {
     @extend .col-sm-offset-1, .col-md-offset-2, .col-lg-offset-1, .col-xs-12, .col-sm-10, .col-md-8, .col-lg-10;
     position: absolute;
 }
 
 .login-forgot-password {
-    color: crimson;
+    color: $corvette-red;
 }
 
 .login-forgot-password:hover {
-    color: rgb(100, 100, 100);
+    color: $corvette-grey;
 }
 
 .login-forgot-password:focus {
-    color: rgb(100, 100, 100);
+    color: $corvette-grey;
     outline: none;
 }
 
@@ -241,24 +276,38 @@ body {
     text-align: right;
 }
 
+.about-text {
+    @extend .col-sm-offset-1, .col-md-offset-1, .col-lg-offset-1, .col-xs-12, .col-sm-10, .col-md-10, .col-lg-10;
+    font-family: myraid-pro;
+    color: white;
+    position: absolute;
+}
+
 .navbar-brand-corvette {
     @extend .navbar-brand;
     font-family: Corvette;
-    color: crimson !important;
+    color: $corvette-red !important;
     font-size: .3em;
+}
+
+.navbar-brand-authorized {
+    @extend .navbar-brand;
+    font-family: Corvette;
+    color: $corvette-red !important;
+    font-size: .6em;
 }
 
 .navbar-dark {
     @extend .navbar-default;
     background-color: black !important;
-    color: crimson;
-    border: 1px solid crimson;
+    color: $corvette-red;
+    border: 1px solid $corvette-red;
 }
 
 .modal-title-corvette {
     @extend .modal-title;
     font-family: Corvette;
-    color: crimson;
+    color: $corvette-red;
     font-size: .8em
 }
 
@@ -279,3 +328,62 @@ body {
     font-size: .8em;
 }
 
+.navbar-user {
+    color: $corvette-red !important;
+}
+
+.carousel-caption-custom {
+    @extend .carousel-caption;
+    bottom-padding: 0px;
+    bottom: -20px;
+    color: $corvette-orange;
+}
+
+.carousel-indicators-custom {
+    @extend .carousel-indicators;
+    bottom: -80px !important;
+}
+
+.carousel-active {
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: $corvette-grey
+}
+
+.navbar-dark .navbar-nav {
+    li {
+        a {
+            color: $corvette-grey;
+        }
+    }
+}
+
+.navbar-dark .navbar-text {
+    color: $corvette-grey;
+}
+
+.carousel-control.left {
+    left: 10%;
+    top: -10%;
+    color: $corvette-grey;
+    span {
+        cursor: pointer;
+    }
+}
+
+.carousel-control.right{
+    right: 10%;
+    top: -10%;
+    color: $corvette-grey;
+    span {
+        cursor: pointer;
+    }
+}
+
+.club-events-home {
+    @include home-page-side-widget;
+}
+
+.club-feed-home {
+    @include home-page-side-widget;
+}

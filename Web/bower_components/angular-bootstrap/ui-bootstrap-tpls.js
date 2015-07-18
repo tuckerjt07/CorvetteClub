@@ -317,16 +317,16 @@ angular.module('ui.bootstrap.buttons', [])
 *
 */
 angular.module('ui.bootstrap.carousel', [])
-.controller('CarouselController', ['$scope', '$interval', '$animate', function ($scope, $interval, $animate) {
+.controller('CarouselController', ['$scope', '$rootScope', '$interval', '$animate', '$timeout',
+                                   function ($scope, $rootScope, $interval, $animate, $timeout) {
   var self = this,
     slides = self.slides = $scope.slides = [],
     currentIndex = -1,
     currentInterval, isPlaying;
   self.currentSlide = null;
-
   var destroyed = false;
   /* direction: "prev" or "next" */
-  self.select = $scope.select = function(nextSlide, direction) {
+  self.select = $scope.select = $rootScope.select = function(nextSlide, direction) {
     var nextIndex = self.indexOfSlide(nextSlide);
     //Decide direction if it's not given
     if (direction === undefined) {
@@ -342,9 +342,9 @@ angular.module('ui.bootstrap.carousel', [])
       angular.extend(nextSlide, {direction: direction, active: true});
       angular.extend(self.currentSlide || {}, {direction: direction, active: false});
       if ($animate.enabled() && !$scope.noTransition && nextSlide.$element) {
-        $scope.$currentTransition = true;
-        nextSlide.$element.one('$animate:close', function closeFn() {
-          $scope.$currentTransition = null;
+        $scope.$currentTransition = false;
+        $animate.on(nextSlide.$element, function closeFn() {
+            $scope.$currentTransition = null;
         });
       }
 
@@ -449,6 +449,7 @@ angular.module('ui.bootstrap.carousel', [])
     slides.push(slide);
     //if this is the first slide or the slide is set to active, select it
     if(slides.length === 1 || slide.active) {
+        $rootScope.masterSlides = slides;
       self.select(slides[slides.length-1]);
       if (slides.length == 1) {
         $scope.play();
@@ -2671,9 +2672,9 @@ angular.module( 'ui.bootstrap.tooltip', [ 'ui.bootstrap.position', 'ui.bootstrap
    *     $tooltipProvider.options( { placement: 'left' } );
    *   });
    */
-	this.options = function( value ) {
-		angular.extend( globalOptions, value );
-	};
+    this.options = function( value ) {
+        angular.extend( globalOptions, value );
+    };
 
   /**
    * This allows you to extend the set of trigger mappings available. E.g.:
@@ -4493,17 +4494,30 @@ angular.module("template/alert/alert.html", []).run(["$templateCache", function(
 }]);
 
 angular.module("template/carousel/carousel.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("template/carousel/carousel.html",
-    "<div ng-mouseenter=\"pause()\" ng-mouseleave=\"play()\" class=\"carousel\" ng-swipe-right=\"prev()\" ng-swipe-left=\"next()\">\n" +
-    "    <ol class=\"carousel-indicators\" ng-show=\"slides.length > 1\">\n" +
-    "        <li ng-repeat=\"slide in slides | orderBy:'index' track by $index\" ng-class=\"{active: isActive(slide)}\" ng-click=\"select(slide)\"></li>\n" +
-    "    </ol>\n" +
-    "    <div class=\"carousel-inner\" ng-transclude></div>\n" +
-    "    <a class=\"left carousel-control\" ng-click=\"prev()\" ng-show=\"slides.length > 1\"><span class=\"glyphicon glyphicon-chevron-left\"></span></a>\n" +
-    "    <a class=\"right carousel-control\" ng-click=\"next()\" ng-show=\"slides.length > 1\"><span class=\"glyphicon glyphicon-chevron-right\"></span></a>\n" +
-    "</div>\n" +
-    "");
+    $templateCache.put("template/carousel/carousel.html",
+        "<div ng-mouseenter='pause()' ng-mouseleave='play()' class='carousel' ng-swipe-right='prev()' ng-swipe-left='next()'>\n" +
+//        "   <div class='carousel-indicators' ng-show='slides.length > 1' ng-repeat='slide in slides | orderBy: \"index\" track by $index'>\n" +
+//        "       {{slide}}<img  ng-src='{{slide.image}}' ng-class='{active: isActive(slide)}' ng-click='select(slide)' />\n" +
+//        "   </div>" +
+        "   <div class='carousel-inner' ng-transclude></div>\n" +
+        "    <a class=\"left carousel-control\" ng-click=\"prev()\" ng-show=\"slides.length > 1\"><span class=\"glyphicon glyphicon-chevron-left\"></span></a>\n" +
+        "    <a class=\"right carousel-control\" ng-click=\"next()\" ng-show=\"slides.length > 1\"><span class=\"glyphicon glyphicon-chevron-right\"></span></a>\n" +
+        "</div>\n" +
+        "");
 }]);
+
+//angular.module("template/carousel/carousel.html", []).run(["$templateCache", function($templateCache) {
+//  $templateCache.put("template/carousel/carousel.html",
+//    "<div ng-mouseenter=\"pause()\" ng-mouseleave=\"play()\" class=\"carousel\" ng-swipe-right=\"prev()\" ng-swipe-left=\"next()\">\n" +
+//    "    <ol class=\"carousel-indicators\" ng-show=\"slides.length > 1\">\n" +
+//    "        <li ng-repeat=\"slide in slides | orderBy:'index' track by $index\" ng-class=\"{active: isActive(slide)}\" ng-click=\"select(slide)\"></li>\n" +
+//    "    </ol>\n" +
+//    "    <div class=\"carousel-inner\" ng-transclude></div>\n" +
+//    "    <a class=\"left carousel-control\" ng-click=\"prev()\" ng-show=\"slides.length > 1\"><span class=\"glyphicon glyphicon-chevron-left\"></span></a>\n" +
+//    "    <a class=\"right carousel-control\" ng-click=\"next()\" ng-show=\"slides.length > 1\"><span class=\"glyphicon glyphicon-chevron-right\"></span></a>\n" +
+//    "</div>\n" +
+//    "");
+//}]);
 
 angular.module("template/carousel/slide.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("template/carousel/slide.html",

@@ -39,6 +39,12 @@
                         </a>
                     </li>
                     <li><a href="#">Register</a></li>
+                    <li about-scroll
+                        ng-click="launchPage.navBarCollapsed = !launchPage.navBarCollapsed">
+                        <a href="#">
+                            About
+                        </a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -74,7 +80,7 @@
         </span>
         <span class="space"></span>
         <span>
-            <a href="#" class="link">About</a>
+            <span add-pointer class="link psuedo-anchor" about-scroll>About</a>
         </span>
         <span class="space"></span>
         <span>
@@ -84,4 +90,5 @@
         <span class="copyright">&copy; Jacob Tucker Designs</span>
     </div>
 </div>
+<about></about>
 <login></login>

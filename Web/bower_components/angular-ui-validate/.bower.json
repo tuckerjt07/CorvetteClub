@@ -1,0 +1,25 @@
+{
+  "author": "AngularUI Team",
+  "name": "angular-ui-validate",
+  "homepage": "https://github.com/angular-ui/ui-validate",
+  "main": "./dist/validate.js",
+  "license": "MIT",
+  "dependencies": {
+    "angular": ">= 1.0.5"
+  },
+  "devDependencies": {
+    "angular-mocks": ">=1.0.5",
+    "jquery": ">=1.6"
+  },
+  "version": "1.1.0",
+  "_release": "1.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.0",
+    "commit": "1e71bca66c1a30196add3ed1e08c18dd120b8b96"
+  },
+  "_source": "git://github.com/angular-ui/ui-validate.git",
+  "_target": "~1.1.0",
+  "_originalSource": "angular-ui-validate",
+  "_direct": true
+}
