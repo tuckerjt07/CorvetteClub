@@ -1,5 +1,5 @@
 /*global module */
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     // Project configuration.
     grunt.initConfig({
@@ -7,15 +7,74 @@ module.exports = function(grunt) {
         project: {
             app: [],
             assets: ['assets'],
-            css: ['<%= project.assets %>/sass/style.scss']
+            release: ['release'],
+            bowerDirectory: ['bower_components'],
+            styleDirectory: ['css'],
+            jsDirectory: ['src'],
+            CSSFilename: ['style.min.css'],
+            BowerJSFilename: ['bower.js'],
+            css: ['<%= project.assets %>/sass/style.scss'],
+            inputCSS: ['<%= project.assets %>/<%= project.styleDirectory %>/<%= project.CSSFilename %>'],
+            outputCSS: ['<%= project.release %>/<%= project.assets %>/<%= project.styleDirectory %>/<%= project.CSSFilename %>']
+        },
+        env: {
+            dev: {
+                DESTINATION: 'index.html',
+                SOURCE: 'index.tpl.html'
+            },
+            release: {
+                DESTINATION: 'release/index.html',
+                SOURCE: 'index.release.tpl.html'
+            }
+        },
+        bower_concat: {
+            release: {
+                dest: '<%= project.release %>/<%= project.bowerDirectory %>/<%= project.BowerJSFilename %>',
+                exclude: [
+                    'jquery',
+                    'bootstrap-sass-official'
+                ]
+            }
         },
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'src/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
+                src: ['src/**/*.js', 'release/bower_components/bower.js'],
+                dest: '<%= project.release %>/<%= project.jsDirectory %>/<%= pkg.name %>.min.js'
+            }
+        },
+        copy: {
+            html: {
+                expand: true,
+                cwd: 'templates/',
+                src: '**/*.html',
+                dest: 'release/templates/'
+            },
+            angular: {
+                expand: true,
+                cwd: 'bower_components/angular',
+                src: '*.min.js',
+                dest: 'release/bower_components/angular'
+            },
+            bootstrapFonts: {
+                expand: true,
+                cwd: 'assets/fonts/',
+                src: '**/*',
+                dest: 'release/assets/fonts/'
+            },
+            customFonts: {
+                expand: true,
+                cwd: 'fonts/',
+                src: '**/*.TTF',
+                dest: 'release/fonts/'
+            },
+            images: {
+                expand: true,
+                cwd: 'images/',
+                src: '**/*',
+                dest: 'release/images'
             }
         },
         includeSource: {
@@ -33,7 +92,7 @@ module.exports = function(grunt) {
             },
             myTarget: {
                 files: {
-                    'index.html': 'index.tpl.html'
+                    '<%= DESTINATION %>': '<%= SOURCE %>'
                 }
             }
         },
@@ -71,20 +130,31 @@ module.exports = function(grunt) {
                     compass: false
                 },
                 files: {
-                    '<%= project.assets %>/css/style.css':'<%= project.css %>'
+                    '<%= project.assets %>/css/style.css': '<%= project.css %>'
                 }
+            }
+        },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'assets/css',
+                    src: ['*.css'],
+                    dest: 'release/assets/css/',
+                    ext: '.min.css'
+                }]
             }
         },
         jscs: {
             src: "src/**/*.js",
             options: {
                 config: true,
-                requireCurlyBraces: [ "if" ]
+                requireCurlyBraces: ["if"]
             }
         },
         connect: {
             all: {
-                options:{
+                options: {
                     port: 9000,
                     hostname: "0.0.0.0",
                 }
@@ -99,8 +169,7 @@ module.exports = function(grunt) {
         },
         wiredep: {
 
-            task: {
-
+            dev: {
                 // Point to the files that should be updated when
                 // you run `grunt wiredep`
                 src: [
@@ -114,6 +183,23 @@ module.exports = function(grunt) {
                     // See wiredep's configuration documentation for the options
                     // you may pass:
                     devDependencies: true
+                    // https://github.com/taptapship/wiredep#configuration
+                }
+            },
+            release: {
+                // Point to the files that should be updated when
+                // you run `grunt wiredep`
+                src: [
+                    'index.release.tpl.html'
+                ],
+                exclude: [
+                    'bower_components/bootstrap-sass-official',
+                    'bower_components/jquery'
+                ],
+                options: {
+                    // See wiredep's configuration documentation for the options
+                    // you may pass:
+                    devDependencies: false
                     // https://github.com/taptapship/wiredep#configuration
                 }
             }
@@ -145,6 +231,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-wiredep');
     //Load the plugin that provides the "karma" task
     grunt.loadNpmTasks('grunt-karma');
+    //Load the plugin that provides the "cssmin" task
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    //Load the plugin that provides the "copy" task
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    //Load the plugin that provides the "bower concat" task
+    grunt.loadNpmTasks('grunt-bower-concat');
+    //Load the plugin that provides the "env" task
+    grunt.loadNpmTasks('grunt-env');
     // Include task(s).
     grunt.registerTask('include', ['includeSource']);
     grunt.registerTask('watchTask', ['watch']);
@@ -152,8 +246,17 @@ module.exports = function(grunt) {
     grunt.registerTask('validateJS', ['jscs']);
     grunt.registerTask('launchServer', ['open', 'connect']);
     grunt.registerTask('openBrowser', ['open']);
-    grunt.registerTask('wire', ['wiredep']);
+    grunt.registerTask('wire', ['wiredep:dev']);
     grunt.registerTask('test', ['karma']);
-    grunt.registerTask('develop', ['jscs', 'includeSource', 'wiredep', 'sass:dev', 'launchServer', 'watch']);
-    grunt.registerTask('production', ['uglify', 'includeSource', 'wiredep', 'sass', 'launchServer', 'watch']);
+    grunt.registerTask('releaseCSS', ['sass:dev','cssmin']);
+    grunt.registerTask('releaseJS', ['copy:angular', 'bower_concat', 'uglify', ]);
+    grunt.registerTask('releaseFonts', ['copy:customFonts', 'copy:bootstrapFonts']);
+    grunt.registerTask('releaseImages', ['copy:images']);
+    grunt.registerTask('releaseHTML', ['copy:html', 'env:release', 'loadconst', 'includeSource']);
+    grunt.registerTask('loadconst', 'Load constants', function() {
+        grunt.config('SOURCE', process.env.SOURCE);
+        grunt.config('DESTINATION', process.env.DESTINATION);
+    });
+    grunt.registerTask('develop', ['jscs', 'includeSource', 'wiredep:dev', 'sass:dev', 'launchServer', 'watch']);
+    grunt.registerTask('release', ['releaseCSS', 'releaseJS', 'releaseFonts', 'releaseImages', 'releaseHTML']);
 };

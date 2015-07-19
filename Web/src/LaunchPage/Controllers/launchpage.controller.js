@@ -22,7 +22,7 @@
                 launchPage.open = function (size) {
                     var modalInstance = $modal.open({
                         animation: launchPage.animationsEnabled,
-                        templateUrl: '../templates/LaunchPage/register.modal.html',
+                        templateUrl: 'templates/LaunchPage/register.modal.html',
                         controller: 'RegisterModalCtrl',
                         controllerAs: 'registerModal',
                         size: size,
@@ -39,7 +39,7 @@
                 launchPage.forgotPassword = function () {
                     var modalInstance = $modal.open({
                         animation: launchPage.animationsEnabled,
-                        templateUrl: '../templates/LaunchPage/forgot-password.modal.html',
+                        templateUrl: 'templates/LaunchPage/forgot-password.modal.html',
                         controller: 'ForgotPasswordModalCtrl',
                         controllerAs: 'forgotPasswordModal',
                         backdrop: 'static',

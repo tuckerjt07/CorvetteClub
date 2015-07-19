@@ -10,7 +10,7 @@
                 link: function (scope, element, attrs) {
                     var attr = attrs;
                     attrs = attr;
-                    $templateRequest('../../templates/LaunchPage/login.tpl.html', [true])
+                    $templateRequest('templates/LaunchPage/login.tpl.html', [true])
                         .then(function (data) {
                         var compiled = $compile(data);
                         element.append(compiled(scope));
