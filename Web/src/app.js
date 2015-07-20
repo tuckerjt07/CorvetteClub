@@ -1,7 +1,8 @@
 /*global angular */
 (function () {
     'use strict';
-    angular.module('TriLakesCorvetteClub', ['ui.router', 'ui.validate', 'ngAnimate', 'CorvetteClub.launchpage.package', 'ui.bootstrap',
+    angular.module('TriLakesCorvetteClub', ['ui.router', 'ui.validate', 'ui.calendar', 'ngAnimate', 'angular-loading-bar', 'ngAnimate',
+                                            'CorvetteClub.launchpage.package', 'ui.bootstrap', 'CorvetteClub.event.package',
                                             'smoothScroll', 'perfectParallax', 'CorvetteClub.global.package',
                                             'CorvetteClub.authorized.package', 'CorvetteClub.homepage.package'])
         .config(['$stateProvider', '$urlRouterProvider',
@@ -36,6 +37,15 @@
                         views: {
                             HomePage: {
                                 templateUrl: 'templates/HomePage/homepage.html'
+                            }
+                        }
+                    })
+                    .state('app.authorized.events', {
+                        url: '/Events',
+                        views: {
+                            Calendar: {
+                                templateUrl: 'templates/Events/events-calendar.tpl.html',
+                                controller: 'CalendarCtrl as calendar'
                             }
                         }
                     });

@@ -286,11 +286,12 @@ th {
     display: none;
   }
 
-  .btn > .caret, .btn-submit > .caret, .btn-cancel > .caret, .home-action-button > .caret,
+  .btn > .caret, .btn-submit > .caret, .btn-cancel > .caret, .home-action-button > .caret, .fc-button > .caret,
   .dropup > .btn > .caret,
   .dropup > .btn-submit > .caret,
   .dropup > .btn-cancel > .caret,
-  .dropup > .home-action-button > .caret {
+  .dropup > .home-action-button > .caret,
+  .dropup > .fc-button > .caret {
     border-top-color: #000 !important;
   }
 
@@ -3205,7 +3206,8 @@ input[type="search"] {
   .input-group-sm > .input-group-btn > input[type="date"].btn,
   .input-group-sm > .input-group-btn > input[type="date"].btn-submit,
   .input-group-sm > .input-group-btn > input[type="date"].btn-cancel,
-  .input-group-sm > .input-group-btn > input[type="date"].home-action-button, .input-group-sm input[type="date"],
+  .input-group-sm > .input-group-btn > input[type="date"].home-action-button,
+  .input-group-sm > .input-group-btn > input[type="date"].fc-button, .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
   .input-group-sm > input[type="time"].input-group-addon,
@@ -3213,7 +3215,8 @@ input[type="search"] {
   .input-group-sm > .input-group-btn > input[type="time"].btn,
   .input-group-sm > .input-group-btn > input[type="time"].btn-submit,
   .input-group-sm > .input-group-btn > input[type="time"].btn-cancel,
-  .input-group-sm > .input-group-btn > input[type="time"].home-action-button, .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="time"].home-action-button,
+  .input-group-sm > .input-group-btn > input[type="time"].fc-button, .input-group-sm
   input[type="time"],
   input[type="datetime-local"].input-sm,
   .input-group-sm > input[type="datetime-local"].form-control,
@@ -3222,7 +3225,8 @@ input[type="search"] {
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn-submit,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn-cancel,
-  .input-group-sm > .input-group-btn > input[type="datetime-local"].home-action-button, .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].home-action-button,
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].fc-button, .input-group-sm
   input[type="datetime-local"],
   input[type="month"].input-sm,
   .input-group-sm > input[type="month"].form-control,
@@ -3231,7 +3235,8 @@ input[type="search"] {
   .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm > .input-group-btn > input[type="month"].btn-submit,
   .input-group-sm > .input-group-btn > input[type="month"].btn-cancel,
-  .input-group-sm > .input-group-btn > input[type="month"].home-action-button, .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="month"].home-action-button,
+  .input-group-sm > .input-group-btn > input[type="month"].fc-button, .input-group-sm
   input[type="month"] {
     line-height: 30px;
   }
@@ -3241,7 +3246,8 @@ input[type="search"] {
   .input-group-lg > .input-group-btn > input[type="date"].btn,
   .input-group-lg > .input-group-btn > input[type="date"].btn-submit,
   .input-group-lg > .input-group-btn > input[type="date"].btn-cancel,
-  .input-group-lg > .input-group-btn > input[type="date"].home-action-button, .input-group-lg input[type="date"],
+  .input-group-lg > .input-group-btn > input[type="date"].home-action-button,
+  .input-group-lg > .input-group-btn > input[type="date"].fc-button, .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
   .input-group-lg > input[type="time"].input-group-addon,
@@ -3249,7 +3255,8 @@ input[type="search"] {
   .input-group-lg > .input-group-btn > input[type="time"].btn,
   .input-group-lg > .input-group-btn > input[type="time"].btn-submit,
   .input-group-lg > .input-group-btn > input[type="time"].btn-cancel,
-  .input-group-lg > .input-group-btn > input[type="time"].home-action-button, .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="time"].home-action-button,
+  .input-group-lg > .input-group-btn > input[type="time"].fc-button, .input-group-lg
   input[type="time"],
   input[type="datetime-local"].input-lg,
   .input-group-lg > input[type="datetime-local"].form-control,
@@ -3258,7 +3265,8 @@ input[type="search"] {
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn-submit,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn-cancel,
-  .input-group-lg > .input-group-btn > input[type="datetime-local"].home-action-button, .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].home-action-button,
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].fc-button, .input-group-lg
   input[type="datetime-local"],
   input[type="month"].input-lg,
   .input-group-lg > input[type="month"].form-control,
@@ -3267,7 +3275,8 @@ input[type="search"] {
   .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg > .input-group-btn > input[type="month"].btn-submit,
   .input-group-lg > .input-group-btn > input[type="month"].btn-cancel,
-  .input-group-lg > .input-group-btn > input[type="month"].home-action-button, .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="month"].home-action-button,
+  .input-group-lg > .input-group-btn > input[type="month"].fc-button, .input-group-lg
   input[type="month"] {
     line-height: 46px;
   }
@@ -3354,13 +3363,15 @@ input[type="checkbox"] {
 .input-group-lg > .input-group-btn > .form-control-static.btn,
 .input-group-lg > .input-group-btn > .form-control-static.btn-submit,
 .input-group-lg > .input-group-btn > .form-control-static.btn-cancel,
-.input-group-lg > .input-group-btn > .form-control-static.home-action-button, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
+.input-group-lg > .input-group-btn > .form-control-static.home-action-button,
+.input-group-lg > .input-group-btn > .form-control-static.fc-button, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
 .input-group-sm > .form-control-static.input-group-addon,
 .input-group-sm > .form-control-static.input-group-register,
 .input-group-sm > .input-group-btn > .form-control-static.btn,
 .input-group-sm > .input-group-btn > .form-control-static.btn-submit,
 .input-group-sm > .input-group-btn > .form-control-static.btn-cancel,
-.input-group-sm > .input-group-btn > .form-control-static.home-action-button {
+.input-group-sm > .input-group-btn > .form-control-static.home-action-button,
+.input-group-sm > .input-group-btn > .form-control-static.fc-button {
   padding-left: 0;
   padding-right: 0;
 }
@@ -3371,7 +3382,8 @@ input[type="checkbox"] {
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-btn > .btn-submit,
 .input-group-sm > .input-group-btn > .btn-cancel,
-.input-group-sm > .input-group-btn > .home-action-button {
+.input-group-sm > .input-group-btn > .home-action-button,
+.input-group-sm > .input-group-btn > .fc-button {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -3385,7 +3397,8 @@ select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > .input-group-btn > select.btn,
 .input-group-sm > .input-group-btn > select.btn-submit,
 .input-group-sm > .input-group-btn > select.btn-cancel,
-.input-group-sm > .input-group-btn > select.home-action-button {
+.input-group-sm > .input-group-btn > select.home-action-button,
+.input-group-sm > .input-group-btn > select.fc-button {
   height: 30px;
   line-height: 30px;
 }
@@ -3397,6 +3410,7 @@ textarea.input-sm, .input-group-sm > textarea.form-control,
 .input-group-sm > .input-group-btn > textarea.btn-submit,
 .input-group-sm > .input-group-btn > textarea.btn-cancel,
 .input-group-sm > .input-group-btn > textarea.home-action-button,
+.input-group-sm > .input-group-btn > textarea.fc-button,
 select[multiple].input-sm,
 .input-group-sm > select[multiple].form-control,
 .input-group-sm > select[multiple].input-group-addon,
@@ -3404,7 +3418,8 @@ select[multiple].input-sm,
 .input-group-sm > .input-group-btn > select[multiple].btn,
 .input-group-sm > .input-group-btn > select[multiple].btn-submit,
 .input-group-sm > .input-group-btn > select[multiple].btn-cancel,
-.input-group-sm > .input-group-btn > select[multiple].home-action-button {
+.input-group-sm > .input-group-btn > select[multiple].home-action-button,
+.input-group-sm > .input-group-btn > select[multiple].fc-button {
   height: auto;
 }
 
@@ -3437,7 +3452,8 @@ select[multiple].input-sm,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-btn > .btn-submit,
 .input-group-lg > .input-group-btn > .btn-cancel,
-.input-group-lg > .input-group-btn > .home-action-button {
+.input-group-lg > .input-group-btn > .home-action-button,
+.input-group-lg > .input-group-btn > .fc-button {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -3451,7 +3467,8 @@ select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > .input-group-btn > select.btn,
 .input-group-lg > .input-group-btn > select.btn-submit,
 .input-group-lg > .input-group-btn > select.btn-cancel,
-.input-group-lg > .input-group-btn > select.home-action-button {
+.input-group-lg > .input-group-btn > select.home-action-button,
+.input-group-lg > .input-group-btn > select.fc-button {
   height: 46px;
   line-height: 46px;
 }
@@ -3463,6 +3480,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
 .input-group-lg > .input-group-btn > textarea.btn-submit,
 .input-group-lg > .input-group-btn > textarea.btn-cancel,
 .input-group-lg > .input-group-btn > textarea.home-action-button,
+.input-group-lg > .input-group-btn > textarea.fc-button,
 select[multiple].input-lg,
 .input-group-lg > select[multiple].form-control,
 .input-group-lg > select[multiple].input-group-addon,
@@ -3470,7 +3488,8 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-btn > select[multiple].btn,
 .input-group-lg > .input-group-btn > select[multiple].btn-submit,
 .input-group-lg > .input-group-btn > select[multiple].btn-cancel,
-.input-group-lg > .input-group-btn > select[multiple].home-action-button {
+.input-group-lg > .input-group-btn > select[multiple].home-action-button,
+.input-group-lg > .input-group-btn > select[multiple].fc-button {
   height: auto;
 }
 
@@ -3524,6 +3543,7 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-btn > .btn-submit + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn-cancel + .form-control-feedback,
 .input-group-lg > .input-group-btn > .home-action-button + .form-control-feedback,
+.input-group-lg > .input-group-btn > .fc-button + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback {
   width: 46px;
@@ -3538,6 +3558,7 @@ select[multiple].input-lg,
 .input-group-sm > .input-group-btn > .btn-submit + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn-cancel + .form-control-feedback,
 .input-group-sm > .input-group-btn > .home-action-button + .form-control-feedback,
+.input-group-sm > .input-group-btn > .fc-button + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback {
   width: 30px;
@@ -3737,7 +3758,7 @@ select[multiple].input-lg,
   }
 }
 
-.btn, .btn-submit, .btn-cancel, .home-action-button {
+.btn, .btn-submit, .btn-cancel, .home-action-button, .fc-button {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -3757,22 +3778,22 @@ select[multiple].input-lg,
   -ms-user-select: none;
   user-select: none;
 }
-.btn:focus, .btn-submit:focus, .btn-cancel:focus, .home-action-button:focus, .btn.focus, .focus.btn-submit, .focus.btn-cancel, .focus.home-action-button, .btn:active:focus, .btn-submit:active:focus, .btn-cancel:active:focus, .home-action-button:active:focus, .btn:active.focus, .btn-submit:active.focus, .btn-cancel:active.focus, .home-action-button:active.focus, .btn.active:focus, .active.btn-submit:focus, .active.btn-cancel:focus, .active.home-action-button:focus, .btn.active.focus, .active.focus.btn-submit, .active.focus.btn-cancel, .active.focus.home-action-button {
+.btn:focus, .btn-submit:focus, .btn-cancel:focus, .home-action-button:focus, .fc-button:focus, .btn.focus, .focus.btn-submit, .focus.btn-cancel, .focus.home-action-button, .focus.fc-button, .btn:active:focus, .btn-submit:active:focus, .btn-cancel:active:focus, .home-action-button:active:focus, .fc-button:active:focus, .btn:active.focus, .btn-submit:active.focus, .btn-cancel:active.focus, .home-action-button:active.focus, .fc-button:active.focus, .btn.active:focus, .active.btn-submit:focus, .active.btn-cancel:focus, .active.home-action-button:focus, .active.fc-button:focus, .btn.active.focus, .active.focus.btn-submit, .active.focus.btn-cancel, .active.focus.home-action-button, .active.focus.fc-button {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.btn:hover, .btn-submit:hover, .btn-cancel:hover, .home-action-button:hover, .btn:focus, .btn-submit:focus, .btn-cancel:focus, .home-action-button:focus, .btn.focus, .focus.btn-submit, .focus.btn-cancel, .focus.home-action-button {
+.btn:hover, .btn-submit:hover, .btn-cancel:hover, .home-action-button:hover, .fc-button:hover, .btn:focus, .btn-submit:focus, .btn-cancel:focus, .home-action-button:focus, .fc-button:focus, .btn.focus, .focus.btn-submit, .focus.btn-cancel, .focus.home-action-button, .focus.fc-button {
   color: #333;
   text-decoration: none;
 }
-.btn:active, .btn-submit:active, .btn-cancel:active, .home-action-button:active, .btn.active, .active.btn-submit, .active.btn-cancel, .active.home-action-button {
+.btn:active, .btn-submit:active, .btn-cancel:active, .home-action-button:active, .fc-button:active, .btn.active, .active.btn-submit, .active.btn-cancel, .active.home-action-button, .active.fc-button {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.btn.disabled, .disabled.btn-submit, .disabled.btn-cancel, .disabled.home-action-button, .btn[disabled], [disabled].btn-submit, [disabled].btn-cancel, [disabled].home-action-button, fieldset[disabled] .btn, fieldset[disabled] .btn-submit, fieldset[disabled] .btn-cancel, fieldset[disabled] .home-action-button {
+.btn.disabled, .disabled.btn-submit, .disabled.btn-cancel, .disabled.home-action-button, .disabled.fc-button, .btn[disabled], [disabled].btn-submit, [disabled].btn-cancel, [disabled].home-action-button, [disabled].fc-button, fieldset[disabled] .btn, fieldset[disabled] .btn-submit, fieldset[disabled] .btn-cancel, fieldset[disabled] .home-action-button, fieldset[disabled] .fc-button {
   cursor: not-allowed;
   opacity: 0.65;
   filter: alpha(opacity=65);
@@ -3780,7 +3801,7 @@ select[multiple].input-lg,
   box-shadow: none;
 }
 
-a.btn.disabled, a.disabled.btn-submit, a.disabled.btn-cancel, a.disabled.home-action-button, fieldset[disabled] a.btn, fieldset[disabled] a.btn-submit, fieldset[disabled] a.btn-cancel, fieldset[disabled] a.home-action-button {
+a.btn.disabled, a.disabled.btn-submit, a.disabled.btn-cancel, a.disabled.home-action-button, a.disabled.fc-button, fieldset[disabled] a.btn, fieldset[disabled] a.btn-submit, fieldset[disabled] a.btn-cancel, fieldset[disabled] a.home-action-button, fieldset[disabled] a.fc-button {
   pointer-events: none;
 }
 
@@ -4029,21 +4050,21 @@ a.btn.disabled, a.disabled.btn-submit, a.disabled.btn-cancel, a.disabled.home-ac
   text-decoration: none;
 }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btn-submit, .btn-group-lg > .btn-cancel, .btn-group-lg > .home-action-button {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btn-submit, .btn-group-lg > .btn-cancel, .btn-group-lg > .home-action-button, .btn-group-lg > .fc-button {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
   border-radius: 6px;
 }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btn-submit, .btn-group-sm > .btn-cancel, .btn-group-sm > .home-action-button {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btn-submit, .btn-group-sm > .btn-cancel, .btn-group-sm > .home-action-button, .btn-group-sm > .fc-button {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
 
-.btn-xs, .btn-group-xs > .btn, .btn-group-xs > .btn-submit, .btn-group-xs > .btn-cancel, .btn-group-xs > .home-action-button {
+.btn-xs, .btn-group-xs > .btn, .btn-group-xs > .btn-submit, .btn-group-xs > .btn-cancel, .btn-group-xs > .home-action-button, .btn-group-xs > .fc-button {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -4258,43 +4279,50 @@ tbody.collapse.in {
   display: inline-block;
   vertical-align: middle;
 }
-.btn-group > .btn, .btn-group > .btn-submit, .btn-group > .btn-cancel, .btn-group > .home-action-button,
+.btn-group > .btn, .btn-group > .btn-submit, .btn-group > .btn-cancel, .btn-group > .home-action-button, .btn-group > .fc-button,
 .btn-group-vertical > .btn,
 .btn-group-vertical > .btn-submit,
 .btn-group-vertical > .btn-cancel,
-.btn-group-vertical > .home-action-button {
+.btn-group-vertical > .home-action-button,
+.btn-group-vertical > .fc-button {
   position: relative;
   float: left;
 }
-.btn-group > .btn:hover, .btn-group > .btn-submit:hover, .btn-group > .btn-cancel:hover, .btn-group > .home-action-button:hover, .btn-group > .btn:focus, .btn-group > .btn-submit:focus, .btn-group > .btn-cancel:focus, .btn-group > .home-action-button:focus, .btn-group > .btn:active, .btn-group > .btn-submit:active, .btn-group > .btn-cancel:active, .btn-group > .home-action-button:active, .btn-group > .btn.active, .btn-group > .active.btn-submit, .btn-group > .active.btn-cancel, .btn-group > .active.home-action-button,
+.btn-group > .btn:hover, .btn-group > .btn-submit:hover, .btn-group > .btn-cancel:hover, .btn-group > .home-action-button:hover, .btn-group > .fc-button:hover, .btn-group > .btn:focus, .btn-group > .btn-submit:focus, .btn-group > .btn-cancel:focus, .btn-group > .home-action-button:focus, .btn-group > .fc-button:focus, .btn-group > .btn:active, .btn-group > .btn-submit:active, .btn-group > .btn-cancel:active, .btn-group > .home-action-button:active, .btn-group > .fc-button:active, .btn-group > .btn.active, .btn-group > .active.btn-submit, .btn-group > .active.btn-cancel, .btn-group > .active.home-action-button, .btn-group > .active.fc-button,
 .btn-group-vertical > .btn:hover,
 .btn-group-vertical > .btn-submit:hover,
 .btn-group-vertical > .btn-cancel:hover,
 .btn-group-vertical > .home-action-button:hover,
+.btn-group-vertical > .fc-button:hover,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > .btn-submit:focus,
 .btn-group-vertical > .btn-cancel:focus,
 .btn-group-vertical > .home-action-button:focus,
+.btn-group-vertical > .fc-button:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .btn-submit:active,
 .btn-group-vertical > .btn-cancel:active,
 .btn-group-vertical > .home-action-button:active,
+.btn-group-vertical > .fc-button:active,
 .btn-group-vertical > .btn.active,
 .btn-group-vertical > .active.btn-submit,
 .btn-group-vertical > .active.btn-cancel,
-.btn-group-vertical > .active.home-action-button {
+.btn-group-vertical > .active.home-action-button,
+.btn-group-vertical > .active.fc-button {
   z-index: 2;
 }
 
-.btn-group .btn + .btn, .btn-group .btn-submit + .btn, .btn-group .btn-cancel + .btn, .btn-group .home-action-button + .btn, .btn-group .btn + .btn-submit, .btn-group .btn-submit + .btn-submit, .btn-group .btn-cancel + .btn-submit, .btn-group .home-action-button + .btn-submit, .btn-group .btn + .btn-cancel, .btn-group .btn-submit + .btn-cancel, .btn-group .btn-cancel + .btn-cancel, .btn-group .home-action-button + .btn-cancel, .btn-group .btn + .home-action-button, .btn-group .btn-submit + .home-action-button, .btn-group .btn-cancel + .home-action-button, .btn-group .home-action-button + .home-action-button,
+.btn-group .btn + .btn, .btn-group .btn-submit + .btn, .btn-group .btn-cancel + .btn, .btn-group .home-action-button + .btn, .btn-group .fc-button + .btn, .btn-group .btn + .btn-submit, .btn-group .btn-submit + .btn-submit, .btn-group .btn-cancel + .btn-submit, .btn-group .home-action-button + .btn-submit, .btn-group .fc-button + .btn-submit, .btn-group .btn + .btn-cancel, .btn-group .btn-submit + .btn-cancel, .btn-group .btn-cancel + .btn-cancel, .btn-group .home-action-button + .btn-cancel, .btn-group .fc-button + .btn-cancel, .btn-group .btn + .home-action-button, .btn-group .btn-submit + .home-action-button, .btn-group .btn-cancel + .home-action-button, .btn-group .home-action-button + .home-action-button, .btn-group .fc-button + .home-action-button, .btn-group .btn + .fc-button, .btn-group .btn-submit + .fc-button, .btn-group .btn-cancel + .fc-button, .btn-group .home-action-button + .fc-button, .btn-group .fc-button + .fc-button,
 .btn-group .btn + .btn-group,
 .btn-group .btn-submit + .btn-group,
 .btn-group .btn-cancel + .btn-group,
 .btn-group .home-action-button + .btn-group,
+.btn-group .fc-button + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group .btn-group + .btn-submit,
 .btn-group .btn-group + .btn-cancel,
 .btn-group .btn-group + .home-action-button,
+.btn-group .btn-group + .fc-button,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px;
 }
@@ -4309,30 +4337,30 @@ tbody.collapse.in {
 .btn-toolbar:after {
   clear: both;
 }
-.btn-toolbar .btn, .btn-toolbar .btn-submit, .btn-toolbar .btn-cancel, .btn-toolbar .home-action-button,
+.btn-toolbar .btn, .btn-toolbar .btn-submit, .btn-toolbar .btn-cancel, .btn-toolbar .home-action-button, .btn-toolbar .fc-button,
 .btn-toolbar .btn-group,
 .btn-toolbar .input-group {
   float: left;
 }
-.btn-toolbar > .btn, .btn-toolbar > .btn-submit, .btn-toolbar > .btn-cancel, .btn-toolbar > .home-action-button,
+.btn-toolbar > .btn, .btn-toolbar > .btn-submit, .btn-toolbar > .btn-cancel, .btn-toolbar > .home-action-button, .btn-toolbar > .fc-button,
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
   margin-left: 5px;
 }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn-submit:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn-cancel:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .home-action-button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn-submit:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn-cancel:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .home-action-button:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .fc-button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
-.btn-group > .btn:first-child, .btn-group > .btn-submit:first-child, .btn-group > .btn-cancel:first-child, .btn-group > .home-action-button:first-child {
+.btn-group > .btn:first-child, .btn-group > .btn-submit:first-child, .btn-group > .btn-cancel:first-child, .btn-group > .home-action-button:first-child, .btn-group > .fc-button:first-child {
   margin-left: 0;
 }
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-submit:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-cancel:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .home-action-button:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-submit:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-cancel:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .home-action-button:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .fc-button:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn:last-child:not(:first-child), .btn-group > .btn-submit:last-child:not(:first-child), .btn-group > .btn-cancel:last-child:not(:first-child), .btn-group > .home-action-button:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .btn-submit:last-child:not(:first-child), .btn-group > .btn-cancel:last-child:not(:first-child), .btn-group > .home-action-button:last-child:not(:first-child), .btn-group > .fc-button:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -4342,17 +4370,17 @@ tbody.collapse.in {
   float: left;
 }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn-submit, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn-cancel, .btn-group > .btn-group:not(:first-child):not(:last-child) > .home-action-button {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn-submit, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn-cancel, .btn-group > .btn-group:not(:first-child):not(:last-child) > .home-action-button, .btn-group > .btn-group:not(:first-child):not(:last-child) > .fc-button {
   border-radius: 0;
 }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn-submit:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn-cancel:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .home-action-button:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn-submit:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn-cancel:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .home-action-button:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .fc-button:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn-submit:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn-cancel:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .home-action-button:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn-submit:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn-cancel:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .home-action-button:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .fc-button:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4362,12 +4390,12 @@ tbody.collapse.in {
   outline: 0;
 }
 
-.btn-group > .btn + .dropdown-toggle, .btn-group > .btn-submit + .dropdown-toggle, .btn-group > .btn-cancel + .dropdown-toggle, .btn-group > .home-action-button + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .btn-group > .btn-submit + .dropdown-toggle, .btn-group > .btn-cancel + .dropdown-toggle, .btn-group > .home-action-button + .dropdown-toggle, .btn-group > .fc-button + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > .btn-submit + .dropdown-toggle, .btn-group-lg.btn-group > .btn-cancel + .dropdown-toggle, .btn-group-lg.btn-group > .home-action-button + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > .btn-submit + .dropdown-toggle, .btn-group-lg.btn-group > .btn-cancel + .dropdown-toggle, .btn-group-lg.btn-group > .home-action-button + .dropdown-toggle, .btn-group-lg.btn-group > .fc-button + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -4381,25 +4409,26 @@ tbody.collapse.in {
   box-shadow: none;
 }
 
-.btn .caret, .btn-submit .caret, .btn-cancel .caret, .home-action-button .caret {
+.btn .caret, .btn-submit .caret, .btn-cancel .caret, .home-action-button .caret, .fc-button .caret {
   margin-left: 0;
 }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > .btn-submit .caret, .btn-group-lg > .btn-cancel .caret, .btn-group-lg > .home-action-button .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > .btn-submit .caret, .btn-group-lg > .btn-cancel .caret, .btn-group-lg > .home-action-button .caret, .btn-group-lg > .fc-button .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > .btn-submit .caret, .dropup .btn-group-lg > .btn-cancel .caret, .dropup .btn-group-lg > .home-action-button .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > .btn-submit .caret, .dropup .btn-group-lg > .btn-cancel .caret, .dropup .btn-group-lg > .home-action-button .caret, .dropup .btn-group-lg > .fc-button .caret {
   border-width: 0 5px 5px;
 }
 
-.btn-group-vertical > .btn, .btn-group-vertical > .btn-submit, .btn-group-vertical > .btn-cancel, .btn-group-vertical > .home-action-button,
+.btn-group-vertical > .btn, .btn-group-vertical > .btn-submit, .btn-group-vertical > .btn-cancel, .btn-group-vertical > .home-action-button, .btn-group-vertical > .fc-button,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
 .btn-group-vertical > .btn-group > .btn-submit,
 .btn-group-vertical > .btn-group > .btn-cancel,
-.btn-group-vertical > .btn-group > .home-action-button {
+.btn-group-vertical > .btn-group > .home-action-button,
+.btn-group-vertical > .btn-group > .fc-button {
   display: block;
   float: none;
   width: 100%;
@@ -4412,48 +4441,50 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group:after {
   clear: both;
 }
-.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .btn-submit, .btn-group-vertical > .btn-group > .btn-cancel, .btn-group-vertical > .btn-group > .home-action-button {
+.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .btn-submit, .btn-group-vertical > .btn-group > .btn-cancel, .btn-group-vertical > .btn-group > .home-action-button, .btn-group-vertical > .btn-group > .fc-button {
   float: none;
 }
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn-submit + .btn, .btn-group-vertical > .btn-cancel + .btn, .btn-group-vertical > .home-action-button + .btn, .btn-group-vertical > .btn + .btn-submit, .btn-group-vertical > .btn-submit + .btn-submit, .btn-group-vertical > .btn-cancel + .btn-submit, .btn-group-vertical > .home-action-button + .btn-submit, .btn-group-vertical > .btn + .btn-cancel, .btn-group-vertical > .btn-submit + .btn-cancel, .btn-group-vertical > .btn-cancel + .btn-cancel, .btn-group-vertical > .home-action-button + .btn-cancel, .btn-group-vertical > .btn + .home-action-button, .btn-group-vertical > .btn-submit + .home-action-button, .btn-group-vertical > .btn-cancel + .home-action-button, .btn-group-vertical > .home-action-button + .home-action-button,
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn-submit + .btn, .btn-group-vertical > .btn-cancel + .btn, .btn-group-vertical > .home-action-button + .btn, .btn-group-vertical > .fc-button + .btn, .btn-group-vertical > .btn + .btn-submit, .btn-group-vertical > .btn-submit + .btn-submit, .btn-group-vertical > .btn-cancel + .btn-submit, .btn-group-vertical > .home-action-button + .btn-submit, .btn-group-vertical > .fc-button + .btn-submit, .btn-group-vertical > .btn + .btn-cancel, .btn-group-vertical > .btn-submit + .btn-cancel, .btn-group-vertical > .btn-cancel + .btn-cancel, .btn-group-vertical > .home-action-button + .btn-cancel, .btn-group-vertical > .fc-button + .btn-cancel, .btn-group-vertical > .btn + .home-action-button, .btn-group-vertical > .btn-submit + .home-action-button, .btn-group-vertical > .btn-cancel + .home-action-button, .btn-group-vertical > .home-action-button + .home-action-button, .btn-group-vertical > .fc-button + .home-action-button, .btn-group-vertical > .btn + .fc-button, .btn-group-vertical > .btn-submit + .fc-button, .btn-group-vertical > .btn-cancel + .fc-button, .btn-group-vertical > .home-action-button + .fc-button, .btn-group-vertical > .fc-button + .fc-button,
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > .btn-submit + .btn-group,
 .btn-group-vertical > .btn-cancel + .btn-group,
 .btn-group-vertical > .home-action-button + .btn-group,
+.btn-group-vertical > .fc-button + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .btn-submit,
 .btn-group-vertical > .btn-group + .btn-cancel,
 .btn-group-vertical > .btn-group + .home-action-button,
+.btn-group-vertical > .btn-group + .fc-button,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0;
 }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .btn-submit:not(:first-child):not(:last-child), .btn-group-vertical > .btn-cancel:not(:first-child):not(:last-child), .btn-group-vertical > .home-action-button:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .btn-submit:not(:first-child):not(:last-child), .btn-group-vertical > .btn-cancel:not(:first-child):not(:last-child), .btn-group-vertical > .home-action-button:not(:first-child):not(:last-child), .btn-group-vertical > .fc-button:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
-.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .btn-submit:first-child:not(:last-child), .btn-group-vertical > .btn-cancel:first-child:not(:last-child), .btn-group-vertical > .home-action-button:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .btn-submit:first-child:not(:last-child), .btn-group-vertical > .btn-cancel:first-child:not(:last-child), .btn-group-vertical > .home-action-button:first-child:not(:last-child), .btn-group-vertical > .fc-button:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .btn-submit:last-child:not(:first-child), .btn-group-vertical > .btn-cancel:last-child:not(:first-child), .btn-group-vertical > .home-action-button:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .btn-submit:last-child:not(:first-child), .btn-group-vertical > .btn-cancel:last-child:not(:first-child), .btn-group-vertical > .home-action-button:last-child:not(:first-child), .btn-group-vertical > .fc-button:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn-submit, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn-cancel, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .home-action-button {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn-submit, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn-cancel, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .home-action-button, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .fc-button {
   border-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn-submit:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn-cancel:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .home-action-button:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn-submit:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn-cancel:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .home-action-button:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .fc-button:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn-submit:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn-cancel:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .home-action-button:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn-submit:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn-cancel:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .home-action-button:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .fc-button:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4464,32 +4495,35 @@ tbody.collapse.in {
   table-layout: fixed;
   border-collapse: separate;
 }
-.btn-group-justified > .btn, .btn-group-justified > .btn-submit, .btn-group-justified > .btn-cancel, .btn-group-justified > .home-action-button,
+.btn-group-justified > .btn, .btn-group-justified > .btn-submit, .btn-group-justified > .btn-cancel, .btn-group-justified > .home-action-button, .btn-group-justified > .fc-button,
 .btn-group-justified > .btn-group {
   float: none;
   display: table-cell;
   width: 1%;
 }
-.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .btn-submit, .btn-group-justified > .btn-group .btn-cancel, .btn-group-justified > .btn-group .home-action-button {
+.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .btn-submit, .btn-group-justified > .btn-group .btn-cancel, .btn-group-justified > .btn-group .home-action-button, .btn-group-justified > .btn-group .fc-button {
   width: 100%;
 }
 .btn-group-justified > .btn-group .dropdown-menu {
   left: auto;
 }
 
-[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .btn-submit input[type="radio"], [data-toggle="buttons"] > .btn-cancel input[type="radio"], [data-toggle="buttons"] > .home-action-button input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .btn-submit input[type="radio"], [data-toggle="buttons"] > .btn-cancel input[type="radio"], [data-toggle="buttons"] > .home-action-button input[type="radio"], [data-toggle="buttons"] > .fc-button input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-submit input[type="checkbox"],
 [data-toggle="buttons"] > .btn-cancel input[type="checkbox"],
 [data-toggle="buttons"] > .home-action-button input[type="checkbox"],
+[data-toggle="buttons"] > .fc-button input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn-submit input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn-cancel input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .home-action-button input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .fc-button input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn-submit input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn-cancel input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .home-action-button input[type="checkbox"] {
+[data-toggle="buttons"] > .btn-group > .home-action-button input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .fc-button input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -4552,7 +4586,9 @@ tbody.collapse.in {
 .input-group-sm > .input-group-btn > .btn-cancel.input-group-register,
 .input-group-sm > .input-group-btn > .input-group-addon.home-action-button,
 .input-group-sm > .input-group-btn > .home-action-button.input-group-register,
-.input-group-sm > .input-group-btn > .btn.input-group-register, .input-sm.input-group-register {
+.input-group-sm > .input-group-btn > .btn.input-group-register,
+.input-group-sm > .input-group-btn > .input-group-register.fc-button,
+.input-group-sm > .input-group-btn > .input-group-addon.fc-button, .input-sm.input-group-register {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 3px;
@@ -4567,7 +4603,9 @@ tbody.collapse.in {
 .input-group-lg > .input-group-btn > .btn-cancel.input-group-register,
 .input-group-lg > .input-group-btn > .input-group-addon.home-action-button,
 .input-group-lg > .input-group-btn > .home-action-button.input-group-register,
-.input-group-lg > .input-group-btn > .btn.input-group-register, .input-lg.input-group-register {
+.input-group-lg > .input-group-btn > .btn.input-group-register,
+.input-group-lg > .input-group-btn > .input-group-register.fc-button,
+.input-group-lg > .input-group-btn > .input-group-addon.fc-button, .input-lg.input-group-register {
   padding: 10px 16px;
   font-size: 18px;
   border-radius: 6px;
@@ -4585,19 +4623,23 @@ tbody.collapse.in {
 .input-group-btn:first-child > .btn-submit,
 .input-group-btn:first-child > .btn-cancel,
 .input-group-btn:first-child > .home-action-button,
+.input-group-btn:first-child > .fc-button,
 .input-group-btn:first-child > .btn-group > .btn,
 .input-group-btn:first-child > .btn-group > .btn-submit,
 .input-group-btn:first-child > .btn-group > .btn-cancel,
 .input-group-btn:first-child > .btn-group > .home-action-button,
+.input-group-btn:first-child > .btn-group > .fc-button,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-submit:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-cancel:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .home-action-button:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .fc-button:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn-submit,
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn-cancel,
-.input-group-btn:last-child > .btn-group:not(:last-child) > .home-action-button {
+.input-group-btn:last-child > .btn-group:not(:last-child) > .home-action-button,
+.input-group-btn:last-child > .btn-group:not(:last-child) > .fc-button {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4613,19 +4655,23 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn-submit,
 .input-group-btn:last-child > .btn-cancel,
 .input-group-btn:last-child > .home-action-button,
+.input-group-btn:last-child > .fc-button,
 .input-group-btn:last-child > .btn-group > .btn,
 .input-group-btn:last-child > .btn-group > .btn-submit,
 .input-group-btn:last-child > .btn-group > .btn-cancel,
 .input-group-btn:last-child > .btn-group > .home-action-button,
+.input-group-btn:last-child > .btn-group > .fc-button,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .btn-submit:not(:first-child),
 .input-group-btn:first-child > .btn-cancel:not(:first-child),
 .input-group-btn:first-child > .home-action-button:not(:first-child),
+.input-group-btn:first-child > .fc-button:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn-submit,
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn-cancel,
-.input-group-btn:first-child > .btn-group:not(:first-child) > .home-action-button {
+.input-group-btn:first-child > .btn-group:not(:first-child) > .home-action-button,
+.input-group-btn:first-child > .btn-group:not(:first-child) > .fc-button {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4639,20 +4685,20 @@ tbody.collapse.in {
   font-size: 0;
   white-space: nowrap;
 }
-.input-group-btn > .btn, .input-group-btn > .btn-submit, .input-group-btn > .btn-cancel, .input-group-btn > .home-action-button {
+.input-group-btn > .btn, .input-group-btn > .btn-submit, .input-group-btn > .btn-cancel, .input-group-btn > .home-action-button, .input-group-btn > .fc-button {
   position: relative;
 }
-.input-group-btn > .btn + .btn, .input-group-btn > .btn-submit + .btn, .input-group-btn > .btn-cancel + .btn, .input-group-btn > .home-action-button + .btn, .input-group-btn > .btn + .btn-submit, .input-group-btn > .btn-submit + .btn-submit, .input-group-btn > .btn-cancel + .btn-submit, .input-group-btn > .home-action-button + .btn-submit, .input-group-btn > .btn + .btn-cancel, .input-group-btn > .btn-submit + .btn-cancel, .input-group-btn > .btn-cancel + .btn-cancel, .input-group-btn > .home-action-button + .btn-cancel, .input-group-btn > .btn + .home-action-button, .input-group-btn > .btn-submit + .home-action-button, .input-group-btn > .btn-cancel + .home-action-button, .input-group-btn > .home-action-button + .home-action-button {
+.input-group-btn > .btn + .btn, .input-group-btn > .btn-submit + .btn, .input-group-btn > .btn-cancel + .btn, .input-group-btn > .home-action-button + .btn, .input-group-btn > .fc-button + .btn, .input-group-btn > .btn + .btn-submit, .input-group-btn > .btn-submit + .btn-submit, .input-group-btn > .btn-cancel + .btn-submit, .input-group-btn > .home-action-button + .btn-submit, .input-group-btn > .fc-button + .btn-submit, .input-group-btn > .btn + .btn-cancel, .input-group-btn > .btn-submit + .btn-cancel, .input-group-btn > .btn-cancel + .btn-cancel, .input-group-btn > .home-action-button + .btn-cancel, .input-group-btn > .fc-button + .btn-cancel, .input-group-btn > .btn + .home-action-button, .input-group-btn > .btn-submit + .home-action-button, .input-group-btn > .btn-cancel + .home-action-button, .input-group-btn > .home-action-button + .home-action-button, .input-group-btn > .fc-button + .home-action-button, .input-group-btn > .btn + .fc-button, .input-group-btn > .btn-submit + .fc-button, .input-group-btn > .btn-cancel + .fc-button, .input-group-btn > .home-action-button + .fc-button, .input-group-btn > .fc-button + .fc-button {
   margin-left: -1px;
 }
-.input-group-btn > .btn:hover, .input-group-btn > .btn-submit:hover, .input-group-btn > .btn-cancel:hover, .input-group-btn > .home-action-button:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn-submit:focus, .input-group-btn > .btn-cancel:focus, .input-group-btn > .home-action-button:focus, .input-group-btn > .btn:active, .input-group-btn > .btn-submit:active, .input-group-btn > .btn-cancel:active, .input-group-btn > .home-action-button:active {
+.input-group-btn > .btn:hover, .input-group-btn > .btn-submit:hover, .input-group-btn > .btn-cancel:hover, .input-group-btn > .home-action-button:hover, .input-group-btn > .fc-button:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn-submit:focus, .input-group-btn > .btn-cancel:focus, .input-group-btn > .home-action-button:focus, .input-group-btn > .fc-button:focus, .input-group-btn > .btn:active, .input-group-btn > .btn-submit:active, .input-group-btn > .btn-cancel:active, .input-group-btn > .home-action-button:active, .input-group-btn > .fc-button:active {
   z-index: 2;
 }
-.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-submit, .input-group-btn:first-child > .btn-cancel, .input-group-btn:first-child > .home-action-button,
+.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-submit, .input-group-btn:first-child > .btn-cancel, .input-group-btn:first-child > .home-action-button, .input-group-btn:first-child > .fc-button,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
-.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-submit, .input-group-btn:last-child > .btn-cancel, .input-group-btn:last-child > .home-action-button,
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-submit, .input-group-btn:last-child > .btn-cancel, .input-group-btn:last-child > .home-action-button, .input-group-btn:last-child > .fc-button,
 .input-group-btn:last-child > .btn-group {
   z-index: 2;
   margin-left: -1px;
@@ -5143,11 +5189,11 @@ tbody.collapse.in {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > .navbar-btn.btn-submit, .btn-group-sm > .navbar-btn.btn-cancel, .btn-group-sm > .navbar-btn.home-action-button {
+.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > .navbar-btn.btn-submit, .btn-group-sm > .navbar-btn.btn-cancel, .btn-group-sm > .navbar-btn.home-action-button, .btn-group-sm > .navbar-btn.fc-button {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > .navbar-btn.btn-submit, .btn-group-xs > .navbar-btn.btn-cancel, .btn-group-xs > .navbar-btn.home-action-button {
+.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > .navbar-btn.btn-submit, .btn-group-xs > .navbar-btn.btn-cancel, .btn-group-xs > .navbar-btn.home-action-button, .btn-group-xs > .navbar-btn.fc-button {
   margin-top: 14px;
   margin-bottom: 14px;
 }
@@ -5518,7 +5564,7 @@ tbody.collapse.in {
 .label:empty {
   display: none;
 }
-.btn .label, .btn-submit .label, .btn-cancel .label, .home-action-button .label {
+.btn .label, .btn-submit .label, .btn-cancel .label, .home-action-button .label, .fc-button .label {
   position: relative;
   top: -1px;
 }
@@ -5588,11 +5634,11 @@ a.label:hover, a.label:focus {
 .badge:empty {
   display: none;
 }
-.btn .badge, .btn-submit .badge, .btn-cancel .badge, .home-action-button .badge {
+.btn .badge, .btn-submit .badge, .btn-cancel .badge, .home-action-button .badge, .fc-button .badge {
   position: relative;
   top: -1px;
 }
-.btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn-submit .badge, .btn-group-xs > .btn-cancel .badge, .btn-group-xs > .home-action-button .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn-submit .badge, .btn-group-xs > .btn-cancel .badge, .btn-group-xs > .home-action-button .badge {
+.btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn-submit .badge, .btn-group-xs > .btn-cancel .badge, .btn-group-xs > .home-action-button .badge, .btn-group-xs > .fc-button .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn-submit .badge, .btn-group-xs > .btn-cancel .badge, .btn-group-xs > .home-action-button .badge, .btn-group-xs > .fc-button .badge {
   top: 0;
   padding: 1px 5px;
 }
@@ -6669,11 +6715,11 @@ button.close {
 .modal-footer:after {
   clear: both;
 }
-.modal-footer .btn + .btn, .modal-footer .btn-submit + .btn, .modal-footer .btn-cancel + .btn, .modal-footer .home-action-button + .btn, .modal-footer .btn + .btn-submit, .modal-footer .btn-submit + .btn-submit, .modal-footer .btn-cancel + .btn-submit, .modal-footer .home-action-button + .btn-submit, .modal-footer .btn + .btn-cancel, .modal-footer .btn-submit + .btn-cancel, .modal-footer .btn-cancel + .btn-cancel, .modal-footer .home-action-button + .btn-cancel, .modal-footer .btn + .home-action-button, .modal-footer .btn-submit + .home-action-button, .modal-footer .btn-cancel + .home-action-button, .modal-footer .home-action-button + .home-action-button {
+.modal-footer .btn + .btn, .modal-footer .btn-submit + .btn, .modal-footer .btn-cancel + .btn, .modal-footer .home-action-button + .btn, .modal-footer .fc-button + .btn, .modal-footer .btn + .btn-submit, .modal-footer .btn-submit + .btn-submit, .modal-footer .btn-cancel + .btn-submit, .modal-footer .home-action-button + .btn-submit, .modal-footer .fc-button + .btn-submit, .modal-footer .btn + .btn-cancel, .modal-footer .btn-submit + .btn-cancel, .modal-footer .btn-cancel + .btn-cancel, .modal-footer .home-action-button + .btn-cancel, .modal-footer .fc-button + .btn-cancel, .modal-footer .btn + .home-action-button, .modal-footer .btn-submit + .home-action-button, .modal-footer .btn-cancel + .home-action-button, .modal-footer .home-action-button + .home-action-button, .modal-footer .fc-button + .home-action-button, .modal-footer .btn + .fc-button, .modal-footer .btn-submit + .fc-button, .modal-footer .btn-cancel + .fc-button, .modal-footer .home-action-button + .fc-button, .modal-footer .fc-button + .fc-button {
   margin-left: 5px;
   margin-bottom: 0;
 }
-.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .btn-submit + .btn, .modal-footer .btn-group .btn-cancel + .btn, .modal-footer .btn-group .home-action-button + .btn, .modal-footer .btn-group .btn + .btn-submit, .modal-footer .btn-group .btn-submit + .btn-submit, .modal-footer .btn-group .btn-cancel + .btn-submit, .modal-footer .btn-group .home-action-button + .btn-submit, .modal-footer .btn-group .btn + .btn-cancel, .modal-footer .btn-group .btn-submit + .btn-cancel, .modal-footer .btn-group .btn-cancel + .btn-cancel, .modal-footer .btn-group .home-action-button + .btn-cancel, .modal-footer .btn-group .btn + .home-action-button, .modal-footer .btn-group .btn-submit + .home-action-button, .modal-footer .btn-group .btn-cancel + .home-action-button, .modal-footer .btn-group .home-action-button + .home-action-button {
+.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .btn-submit + .btn, .modal-footer .btn-group .btn-cancel + .btn, .modal-footer .btn-group .home-action-button + .btn, .modal-footer .btn-group .fc-button + .btn, .modal-footer .btn-group .btn + .btn-submit, .modal-footer .btn-group .btn-submit + .btn-submit, .modal-footer .btn-group .btn-cancel + .btn-submit, .modal-footer .btn-group .home-action-button + .btn-submit, .modal-footer .btn-group .fc-button + .btn-submit, .modal-footer .btn-group .btn + .btn-cancel, .modal-footer .btn-group .btn-submit + .btn-cancel, .modal-footer .btn-group .btn-cancel + .btn-cancel, .modal-footer .btn-group .home-action-button + .btn-cancel, .modal-footer .btn-group .fc-button + .btn-cancel, .modal-footer .btn-group .btn + .home-action-button, .modal-footer .btn-group .btn-submit + .home-action-button, .modal-footer .btn-group .btn-cancel + .home-action-button, .modal-footer .btn-group .home-action-button + .home-action-button, .modal-footer .btn-group .fc-button + .home-action-button, .modal-footer .btn-group .btn + .fc-button, .modal-footer .btn-group .btn-submit + .fc-button, .modal-footer .btn-group .btn-cancel + .fc-button, .modal-footer .btn-group .home-action-button + .fc-button, .modal-footer .btn-group .fc-button + .fc-button {
   margin-left: -1px;
 }
 .modal-footer .btn-block + .btn-block {
@@ -7158,7 +7204,7 @@ button.close {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
-.carousel-caption .btn, .carousel-caption-custom .btn, .carousel-caption .btn-submit, .carousel-caption-custom .btn-submit, .carousel-caption .btn-cancel, .carousel-caption-custom .btn-cancel, .carousel-caption .home-action-button, .carousel-caption-custom .home-action-button {
+.carousel-caption .btn, .carousel-caption-custom .btn, .carousel-caption .btn-submit, .carousel-caption-custom .btn-submit, .carousel-caption .btn-cancel, .carousel-caption-custom .btn-cancel, .carousel-caption .home-action-button, .carousel-caption-custom .home-action-button, .carousel-caption .fc-button, .carousel-caption-custom .fc-button {
   text-shadow: none;
 }
 
@@ -7501,27 +7547,83 @@ body {
   background: none;
 }
 
+.text-black {
+  color: black;
+}
+
+.text-blue {
+  color: #0070af;
+}
+
+.text-dark-blue {
+  color: #06213e;
+}
+
+.text-dark-blue-highlight {
+  color: #6c8baa;
+}
+
+.text-bright-red {
+  color: #fe1c03;
+}
+
+.text-bright-red-highlight {
+  color: #fe7e7b;
+}
+
+.text-grey {
+  color: #5c5b61;
+}
+
+.text-orange {
+  color: #881d09;
+}
+
+.text-orange-highlight {
+  color: #d5bbbe;
+}
+
+.text-red, .user-actions .secondary-link {
+  color: #9c0121;
+}
+
+.text-white, .user-actions .primary-link {
+  color: #e9e9e9;
+}
+
+.text-white-highlight {
+  color: #fdfdfd;
+}
+
+.text-yellow {
+  color: #fecb02;
+}
+
+.text-yellow-highlight {
+  color: #fdef6a;
+}
+
 .carbon-fiber-background {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+");
   z-index: 0;
 }
 
 .btn-submit {
-  border: 1px solid #a70209;
-  color: #a70209;
+  border: 1px solid #9c0121;
+  color: #9c0121;
   background: rgba(0, 0, 0, 0.8);
   display: inline-block;
   text-align: center;
   font-size: 1.1em;
 }
 .btn-submit:hover, .btn-submit:active, .btn-submit:active:hover {
-  border: 1px solid #a70209;
+  border: 1px solid #9c0121;
   background: rgba(100, 100, 100, 0.8);
-  color: #a70209;
+  color: #9c0121;
 }
 .btn-submit:focus, .btn-submit:active:focus, .btn-submit.active:focus, .btn-submit.focus, .btn-submit:active.focus, .btn-submit.active.focus {
   border: rgba(100, 100, 100, 0.8);
-  color: #a70209;
+  color: #9c0121;
   outline: rgba(220, 20, 60, 0.4) solid thick;
 }
 
@@ -7608,13 +7710,13 @@ body {
 .webpage-title {
   font-family: Corvette;
   z-index: 101;
-  color: #a70209;
+  color: #9c0121;
   font-size: 1.4em;
   position: absolute;
   top: 30px;
   padding-left: 10px;
-  color: #a70209;
-  -webkit-text-fill-color: #a70209;
+  color: #9c0121;
+  -webkit-text-fill-color: #9c0121;
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -7623,7 +7725,7 @@ body {
 .webpage-title-xs {
   font-family: Corvette;
   z-index: 101;
-  color: #a70209;
+  color: #9c0121;
   font-size: .6em;
   position: absolute;
   top: 10px;
@@ -7637,7 +7739,7 @@ body {
   font-family: Corvette;
   z-index: 101;
   font-size: .8em;
-  color: #a70209;
+  color: #9c0121;
   position: absolute;
   bottom: 50px;
 }
@@ -7645,7 +7747,7 @@ body {
 .about-club-xs {
   font-family: Corvette;
   z-index: 101;
-  color: #a70209;
+  color: #9c0121;
   font-size: .4em;
   position: absolute;
 }
@@ -7658,8 +7760,8 @@ body {
 }
 
 .home-action-button {
-  border: 1px solid #a70209;
-  color: #a70209;
+  border: 1px solid #9c0121;
+  color: #9c0121;
   background: rgba(0, 0, 0, 0.8);
   display: inline-block;
   text-align: center;
@@ -7671,13 +7773,13 @@ body {
   padding-top: 4px;
 }
 .home-action-button:hover, .home-action-button:active, .home-action-button:active:hover {
-  border: 1px solid #a70209;
+  border: 1px solid #9c0121;
   background: rgba(100, 100, 100, 0.8);
-  color: #a70209;
+  color: #9c0121;
 }
 .home-action-button:focus, .home-action-button:active:focus, .home-action-button.active:focus, .home-action-button.focus, .home-action-button:active.focus, .home-action-button.active.focus {
   border: rgba(100, 100, 100, 0.8);
-  color: #a70209;
+  color: #9c0121;
   outline: rgba(100, 100, 100, 0.9) solid 5px;
 }
 
@@ -7709,7 +7811,7 @@ body {
 }
 .lauch-page-footer .copyright {
   font-family: sans-serif;
-  color: white;
+  color: #e9e9e9;
   font-size: 1em;
   padding-right: 15px;
   padding-top: 3px;
@@ -7717,14 +7819,14 @@ body {
 
 .login-title, .about-title {
   font-family: Corvette;
-  color: white;
+  color: #e9e9e9;
   font-size: 1.4em;
   z-index: 20;
   position: absolute;
 }
 
 .register-title {
-  color: white;
+  color: #e9e9e9;
 }
 
 .login-text {
@@ -7732,15 +7834,15 @@ body {
 }
 
 .login-forgot-password {
-  color: #a70209;
+  color: #9c0121;
 }
 
 .login-forgot-password:hover {
-  color: #514954;
+  color: #5c5b61;
 }
 
 .login-forgot-password:focus {
-  color: #514954;
+  color: #5c5b61;
   outline: none;
 }
 
@@ -7751,31 +7853,31 @@ body {
 
 .about-text {
   font-family: myraid-pro;
-  color: white;
+  color: #e9e9e9;
   position: absolute;
 }
 
 .navbar-brand-corvette {
   font-family: Corvette;
-  color: #a70209 !important;
+  color: #9c0121 !important;
   font-size: .3em;
 }
 
 .navbar-brand-authorized {
   font-family: Corvette;
-  color: #a70209 !important;
+  color: #9c0121 !important;
   font-size: .6em;
 }
 
 .navbar-dark {
   background-color: black !important;
-  color: #a70209;
-  border: 1px solid #a70209;
+  color: #9c0121;
+  border: 1px solid #9c0121;
 }
 
 .modal-title-corvette {
   font-family: Corvette;
-  color: #a70209;
+  color: #9c0121;
   font-size: 0.8em;
 }
 
@@ -7795,13 +7897,13 @@ body {
 }
 
 .navbar-user {
-  color: #a70209 !important;
+  color: #9c0121 !important;
 }
 
 .carousel-caption-custom {
   bottom-padding: 0px;
   bottom: -20px;
-  color: #ff830b;
+  color: #881d09;
 }
 
 .carousel-indicators-custom {
@@ -7811,21 +7913,21 @@ body {
 .carousel-active {
   border: 1px solid white;
   border-radius: 50%;
-  background-color: #514954;
+  background-color: #5c5b61;
 }
 
 .navbar-dark .navbar-nav li a {
-  color: #514954;
+  color: #5c5b61;
 }
 
 .navbar-dark .navbar-text {
-  color: #514954;
+  color: #5c5b61;
 }
 
 .carousel-control.left {
   left: 10%;
   top: -10%;
-  color: #514954;
+  color: #5c5b61;
 }
 .carousel-control.left span {
   cursor: pointer;
@@ -7834,7 +7936,7 @@ body {
 .carousel-control.right {
   right: 10%;
   top: -10%;
-  color: #514954;
+  color: #5c5b61;
 }
 .carousel-control.right span {
   cursor: pointer;
@@ -7844,13 +7946,36 @@ body {
   background-color: black;
   padding: 15px;
   min-width: 100%;
+  background-color: #5c5b61;
+  border: 3px solid black;
+  border-radius: 5px;
+  box-shadow: 7px 7px 5px #444444;
 }
 .club-events-home .header {
-  background-color: black;
-  color: #a70209;
+  background-color: #5c5b61;
+  color: #e9e9e9;
   text-align: center;
   font-family: Corvette;
-  font-size: 0.6em;
+  font-size: 0.9em;
+  color: #e9e9e9;
+  -webkit-text-fill-color: #e9e9e9;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.club-events-home .widget-icon {
+  font-size: 2.6em;
+}
+.club-events-home .widget-list {
+  height: 100px;
+  line-height: 100px;
+  white-space: nowrap;
+}
+.club-events-home .widget-item:hover {
+  background-color: #bab8c3;
+}
+.club-events-home .hide-description {
+  display: none;
 }
 
 .club-feed-home {
@@ -7859,11 +7984,99 @@ body {
   min-width: 100%;
 }
 .club-feed-home .header {
-  background-color: black;
-  color: #a70209;
+  background-color: #5c5b61;
+  color: #e9e9e9;
   text-align: center;
   font-family: Corvette;
-  font-size: 0.6em;
+  font-size: 0.9em;
+  color: #e9e9e9;
+  -webkit-text-fill-color: #e9e9e9;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.club-feed-home .widget-icon {
+  font-size: 2.6em;
+}
+.club-feed-home .widget-list {
+  height: 100px;
+  line-height: 100px;
+  white-space: nowrap;
+}
+.club-feed-home .widget-item:hover {
+  background-color: #bab8c3;
+}
+.club-feed-home .hide-description {
+  display: none;
+}
+
+.user-actions {
+  position: absolute;
+  right: 3px;
+  top: 63px;
+  background-color: #5c5b61;
+  z-index: 500;
+  color: #e9e9e9;
+  border-radius: 0px 0px 5px 5px;
+}
+.user-actions .primary-link:hover {
+  color: #fdfdfd;
+}
+.user-actions .secondary-link:hover {
+  color: #fb7c87;
+}
+
+.fc-day {
+  background-color: #5c5b61;
+  color: #e9e9e9;
+}
+
+td.fc-day-number {
+  color: #e9e9e9;
+}
+
+.fc-unthemed .fc-today {
+  background-color: #bab8c3;
+  color: black;
+}
+
+.fc-day-header {
+  background-color: black;
+  color: #9c0121;
+}
+
+.fc-center {
+  color: #9c0121;
+}
+
+.fc-axis {
+  background-color: black;
+  color: #9c0121;
+}
+
+.fc-button {
+  border: 1px solid #9c0121;
+  color: #9c0121;
+  background: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  text-align: center;
+  font-size: 1.1em;
+  text-shadow: none;
+}
+.fc-button:hover, .fc-button:active, .fc-button:active:hover {
+  border: 1px solid #9c0121;
+  background: rgba(100, 100, 100, 0.8);
+  color: #9c0121;
+}
+.fc-button:focus, .fc-button:active:focus, .fc-button.active:focus, .fc-button.focus, .fc-button:active.focus, .fc-button.active.focus {
+  border: rgba(100, 100, 100, 0.8);
+  color: #9c0121;
+  outline: rgba(220, 20, 60, 0.4) solid thick;
+}
+
+.fc-content {
+  background-color: #06213e;
+  border-color: #0070af;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,7 @@
         .factory('GetImages', [function () {
             var i, testImages;
             testImages = [];
-            for (i = 0; i < 8; i++) {
+            for (i = 0; i < 10; i++) {
                 testImages.push({
                     ImageId: i,
                     image: 'http://loremflickr.com/500/300/corvette?random=' + i,

@@ -31,7 +31,6 @@ module.exports = function (grunt) {
             release: {
                 dest: '<%= project.release %>/<%= project.bowerDirectory %>/<%= project.BowerJSFilename %>',
                 exclude: [
-                    'jquery',
                     'bootstrap-sass-official'
                 ]
             }
@@ -176,8 +175,7 @@ module.exports = function (grunt) {
                     'index.tpl.html'
                 ],
                 exclude: [
-                    'bower_components/bootstrap-sass-official/assets/javascripts',
-                    'bower_components/jquery'
+                    'bower_components/bootstrap-sass-official/assets/javascripts'
                 ],
                 options: {
                     // See wiredep's configuration documentation for the options
@@ -193,8 +191,7 @@ module.exports = function (grunt) {
                     'index.release.tpl.html'
                 ],
                 exclude: [
-                    'bower_components/bootstrap-sass-official',
-                    'bower_components/jquery'
+                    'bower_components/bootstrap-sass-official'
                 ],
                 options: {
                     // See wiredep's configuration documentation for the options
@@ -240,7 +237,7 @@ module.exports = function (grunt) {
     //Load the plugin that provides the "env" task
     grunt.loadNpmTasks('grunt-env');
     // Include task(s).
-    grunt.registerTask('include', ['includeSource']);
+    grunt.registerTask('include', ['env:dev', 'loadconst', 'includeSource']);
     grunt.registerTask('watchTask', ['watch']);
     grunt.registerTask('generateCSS', ['sass:dev']);
     grunt.registerTask('validateJS', ['jscs']);
@@ -257,6 +254,6 @@ module.exports = function (grunt) {
         grunt.config('SOURCE', process.env.SOURCE);
         grunt.config('DESTINATION', process.env.DESTINATION);
     });
-    grunt.registerTask('develop', ['jscs', 'includeSource', 'wiredep:dev', 'sass:dev', 'launchServer', 'watch']);
+    grunt.registerTask('develop', ['jscs', 'env:dev', 'loadconst','includeSource', 'wiredep:dev', 'sass:dev', 'launchServer', 'watch']);
     grunt.registerTask('release', ['releaseCSS', 'releaseJS', 'releaseFonts', 'releaseImages', 'releaseHTML']);
 };

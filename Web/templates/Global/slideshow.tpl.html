@@ -1,5 +1,5 @@
 <div ng-controller="CarouselDemoCtrl">
-    <div style="">
+    <div style="margin-top:0px;">
         <carousel interval="myInterval" set-carousel-items-custom>
             <slide ng-repeat="slide in slides" ng-init="copiedSlides = slides" active="slide.active" active-slide="{{slide}}">
                 <img ng-src="{{slide.image}}" style="margin:auto;">

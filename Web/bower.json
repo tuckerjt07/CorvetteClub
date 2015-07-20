@@ -24,7 +24,9 @@
     "angular-bootstrap": "~0.13.0",
     "ngSmoothScroll": "~1.7.1",
     "angular-ui-utils": "bower",
-    "angular-ui-validate": "~1.1.0"
+    "angular-ui-validate": "~1.1.0",
+    "angular-loading-bar": "~0.8.0",
+    "angular-ui-calendar": "~1.0.1"
   },
   "devDependencies": {
     "jquery": "~2.1.4"

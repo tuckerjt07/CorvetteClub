@@ -8,6 +8,8 @@
     <meta name="author" content="">
     <title>Tri-Lakes Corvette Club</title>
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
     <!-- endbower -->
     <!-- include: "type": "css", "files": "assets/**/*.css" -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
@@ -17,6 +19,7 @@
 <body class="full-screen">
     <div ui-view class="full-screen"></div>
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
@@ -25,19 +28,32 @@
     <script src="bower_components/ngSmoothScroll/angular-smooth-scroll.js"></script>
     <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
     <script src="bower_components/angular-ui-validate/dist/validate.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
+    <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
     <!-- endbower -->
     <!-- include: "type": "js", "files": "src/**/*.js" -->
     <script src="src/Authorized/Directives/authorized-navbar.directive.js"></script>
     <script src="src/Authorized/authorized.mdl.js"></script>
+    <script src="src/Events/Controllers/calendar.controller.js"></script>
+    <script src="src/Events/event.mdl.js"></script>
     <script src="src/Global/Directives/add-pointer.directive.js"></script>
     <script src="src/Global/Directives/auto-foucs.directive.js"></script>
+    <script src="src/Global/Directives/closeonoutsideclick.direcitve.js"></script>
     <script src="src/Global/Directives/club-events-scrolll.directive.js"></script>
+    <script src="src/Global/Directives/eventtype.directive.js"></script>
+    <script src="src/Global/Directives/imageloader.directive.js"></script>
     <script src="src/Global/Directives/set-carousel-items-custom.directive.js"></script>
     <script src="src/Global/Directives/slideshow.directive.js"></script>
+    <script src="src/Global/Factories/base64encode.factory.js"></script>
+    <script src="src/Global/Factories/loadimage.factory.js"></script>
     <script src="src/Global/Factories/template-cache.factory.js"></script>
     <script src="src/Global/global.mdl.js"></script>
+    <script src="src/HomePage/Controllers/events.controller.js"></script>
     <script src="src/HomePage/Controllers/slide-show.controller.js"></script>
     <script src="src/HomePage/Directives/club-feed-scroll.directive.js"></script>
+    <script src="src/HomePage/Factories/events.factory.js"></script>
     <script src="src/HomePage/Factories/recentphoto.factory.js"></script>
     <script src="src/HomePage/homepage.mdl.js"></script>
     <script src="src/LaunchPage/Animations/slide.animation.js"></script>

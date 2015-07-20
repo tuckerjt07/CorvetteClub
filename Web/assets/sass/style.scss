@@ -1,11 +1,37 @@
 //Modify Colors Here
 @import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 //Add variables
-$corvette-red: #a70209 !default;
-$corvette-orange: #ff830b !default;
-$corvette-grey: #514954 !default;
+$corvette-blue:#0070af !default;
+ $corvette-blue-highlight:#a2cdf7 !default;
+ $corvette-bright-red:#fe1c03 !default;
+ $corvette-bright-red-highlight:#fe7e7b !default;
+ $corvette-dark-blue:#06213e !default;
+ $corvette-dark-blue-highlight:#6c8baa !default;
+ $corvette-grey:#5c5b61 !default;
+ $corvette-grey-highlight:#bab8c3 !default;
+ $corvette-orange:#881d09 !default;
+ $corvette-orange-highlight:#d5bbbe !default;
+ $corvette-red:#9c0121 !default;
+ $corvette-red-highlight:#fb7c87 !default;
+ $corvette-silver:#d8d8d8 !default;
+ $corvette-silver-highlight:#fefefe !default;
+ $corvette-white:#e9e9e9 !default;
+ $corvette-white-highlight:#fdfdfd !default;
+ $corvette-yellow:#fecb02 !default;
+ $corvette-yellow-highlight:#fdef6a !default;
 //Create mixins
-@mixin custom-button($border, $color, $background, $display, $text-align, $font-size, $primary-border, $primary-background, $primary-color, $secondary-background, $secondary-color, $secondary-outline) {
+@mixin custom-button($border,
+$color,
+$background,
+$display,
+$text-align,
+$font-size,
+$primary-border,
+$primary-background,
+$primary-color,
+$secondary-background,
+$secondary-color,
+$secondary-outline) {
     @extend .btn;
     border: $border;
     color: $color;
@@ -18,63 +44,122 @@ $corvette-grey: #514954 !default;
         background: $primary-background;
         color: $primary-color;
     }
-    &:focus, &:active:focus, &.active:focus, &.focus, &:active.focus, &.active.focus {
+    &:focus,
+    &:active:focus,
+    &.active:focus,
+    &.focus,
+    &:active.focus,
+    &.active.focus {
         border: $secondary-background;
         color: $secondary-color;
         outline: $secondary-outline;
     }
 }
-
-@mixin text-stroke($fallbackColor, $fillColor, $strokeWidth, $strokeColor) {
+@mixin text-stroke($fallbackColor,
+$fillColor,
+$strokeWidth,
+$strokeColor) {
     color: $fallbackColor;
-    -webkit-text-fill-color: $fillColor; /* Will override color (regardless of order) */
+    -webkit-text-fill-color: $fillColor;
+    /* Will override color (regardless of order) */
     -webkit-text-stroke-width: $strokeWidth;
     -webkit-text-stroke-color: $strokeColor;
 }
-
 @mixin home-page-side-widget {
     background-color: black;
     padding: 15px;
     min-width: 100%;
     .header {
-        background-color: black;
-        color: $corvette-red;
+        background-color: $corvette-grey;
+        color: $corvette-white;
         text-align: center;
         font-family: Corvette;
-        font-size: 0.6em;
+        font-size: 0.9em;
+        @include text-stroke($corvette-white, $corvette-white, 1px, black);
+    }
+    .widget-icon {
+        font-size: 2.6em;
+    }
+    .widget-list {
+        height: 100px;
+        line-height: 100px;
+        white-space: nowrap;
+    }
+    .widget-item {
+        &:hover {
+            background-color: $corvette-grey-highlight;
+        }
+    }
+    .hide-description {
+        display: none;
     }
 }
-
 //Add fonts
 @font-face {
     font-family: Corvette;
     src: url(../../fonts/CORVETTE.TTF);
 }
-
 //Adjust tag styles
 body {
     background: none;
 }
-
 //Make classes here
+.text-black {
+    color: black;
+}
+.text-blue {
+    color: $corvette-blue;
+}
+.text-dark-blue {
+    color: $corvette-dark-blue;
+}
+.text-dark-blue-highlight {
+    color: $corvette-dark-blue-highlight;
+}
+.text-bright-red {
+    color: $corvette-bright-red;
+}
+.text-bright-red-highlight {
+    color: $corvette-bright-red-highlight;
+}
+.text-grey {
+    color: $corvette-grey;
+}
+.text-orange {
+    color: $corvette-orange;
+}
+.text-orange-highlight {
+    color: $corvette-orange-highlight;
+}
+.text-red {
+    color: $corvette-red;
+}
+.text-white {
+    color: $corvette-white;
+}
+.text-white-highlight {
+    color: $corvette-white-highlight;
+}
+.text-yellow {
+    color: $corvette-yellow;
+}
+.text-yellow-highlight {
+    color: $corvette-yellow-highlight;
+}
 .carbon-fiber-background {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+");
     z-index: 0;
 }
-
 .btn-submit {
-    @include custom-button (1px solid $corvette-red, $corvette-red, rgba(0,0,0,0.8), inline-block, center, 1.1em, 1px solid $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(100,100,100,0.8), $corvette-red, rgba(220,20,60,0.4) solid thick);
+    @include custom-button (1px solid $corvette-red, $corvette-red, rgba(0, 0, 0, 0.8), inline-block, center, 1.1em, 1px solid $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(220, 20, 60, 0.4) solid thick);
 }
-
 .btn-cancel {
-    @include custom-button (1px solid #111111, #111111, rgba(100, 100, 100, 0.8), inline-block, center, 1.1em, 1px solid #444444, rgba(0,0,0,0.8), #bbbbbb, rgba(0,0,0,.8), #bbbbbb, rgba(100,100,100,0.4) solid thick);
+    @include custom-button (1px solid #111111, #111111, rgba(100, 100, 100, 0.8), inline-block, center, 1.1em, 1px solid #444444, rgba(0, 0, 0, 0.8), #bbbbbb, rgba(0, 0, 0, .8), #bbbbbb, rgba(100, 100, 100, 0.4) solid thick);
 }
-
 .full-screen {
     min-height: 100vh;
     min-width: 100vw;
 }
-
 .full-screen-img {
     @extend .full-screen;
     max-height: 100vh;
@@ -84,19 +169,16 @@ body {
     left: 0;
     z-index: 50;
 }
-
 .slideshow-img {
     position: absolute;
     margin: 0 auto;
     left: 0;
     right: 0;
 }
-
 .slideshow-edge {
     z-index: 60;
     height: 250px;
 }
-
 .play-pause-container {
     @extend .col-xs-3, .col-sm-3, .col-md-3, .col-lg-4, .col-xs-offset-7, .col-sm-offset-9, .col-md-offset-9, .col-lg-offset-10;
     min-height: 60px;
@@ -108,7 +190,6 @@ body {
     bottom: 40px;
     padding-left: 48px;
 }
-
 .media-control-container {
     border-radius: 50%;
     border: 1px solid #bbbbbb;
@@ -116,17 +197,14 @@ body {
     background: rgba(10, 10, 10, 0.7);
     color: #bbbbbb;
 }
-
 .media-control-container:hover {
     background: rgba(100, 100, 100, 0.8);
 }
-
 .play-pause {
     @extend .media-control-container;
     font-size: 2em;
     cursor: pointer;
 }
-
 .backward-forward {
     @extend .media-control-container;
     font-size: 1.2em;
@@ -134,7 +212,6 @@ body {
     vertical-align: super;
     cursor: pointer;
 }
-
 .webpage-title {
     @extend .hidden-xs;
     font-family: Corvette;
@@ -146,7 +223,6 @@ body {
     padding-left: 10px;
     @include text-stroke($corvette-red, $corvette-red, 1px, black);
 }
-
 .webpage-title-xs {
     @extend .hidden-sm, .hidden-md, .hidden-lg;
     font-family: Corvette;
@@ -156,11 +232,9 @@ body {
     position: absolute;
     top: 10px;
 }
-
 .second-line {
     margin-left: 45px;
 }
-
 .about-club {
     @extend .col-sm-8, .col-md-8, .col-lg-11, .hidden-xs;
     font-family: Corvette;
@@ -170,7 +244,6 @@ body {
     position: absolute;
     bottom: 50px;
 }
-
 .about-club-xs {
     @extend .col-xs-11, .hidden-sm, .hidden-md, .hidden-lg;
     font-family: Corvette;
@@ -179,7 +252,6 @@ body {
     font-size: .4em;
     position: absolute;
 }
-
 .home-actions {
     @extend .hidden-xs;
     position: absolute;
@@ -187,16 +259,14 @@ body {
     top: 25px;
     right: 50px;
 }
-
 .home-action-button {
-    @include custom-button (1px solid $corvette-red, $corvette-red, rgba(0,0,0,0.8), inline-block, center, 1.1em, 1px solid $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(100,100,100,0.8), $corvette-red, rgba(100, 100,100,0.9) solid 5px);
+    @include custom-button (1px solid $corvette-red, $corvette-red, rgba(0, 0, 0, 0.8), inline-block, center, 1.1em, 1px solid $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(100, 100, 100, 0.9) solid 5px);
     min-width: 120px;
     min-height: 30px;
     cursor: pointer;
     margin-left: 13px;
     padding-top: 4px;
 }
-
 .lauch-page-footer {
     position: fixed;
     font-family: Corvette;
@@ -227,129 +297,108 @@ body {
     .copyright {
         @extend .pull-right;
         font-family: sans-serif;
-        color: white;
+        color: $corvette-white;
         font-size: 1em;
         padding-right: 15px;
         padding-top: 3px;
     }
 }
-
 .login-title {
     @extend .col-sm-offset-2, .col-md-offset-2, .col-lg-offset-1;
     font-family: Corvette;
-    color: white;
+    color: $corvette-white;
     font-size: 1.4em;
     z-index: 20;
     position: absolute;
 }
-
 .register-title {
     @extend .col-sm-offset-1, .col-md-offset-1, .col-lg-offset-1;
-    color: white;
+    color: $corvette-white;
 }
-
 .about-title {
     @extend .login-title;
 }
-
 .login-text {
     @extend .col-sm-offset-1, .col-md-offset-2, .col-lg-offset-1, .col-xs-12, .col-sm-10, .col-md-8, .col-lg-10;
     position: absolute;
 }
-
 .login-forgot-password {
     color: $corvette-red;
 }
-
 .login-forgot-password:hover {
     color: $corvette-grey;
 }
-
 .login-forgot-password:focus {
     color: $corvette-grey;
     outline: none;
 }
-
 .login-submit {
     @extend .col-sm-offset-9, .col-md-offset-9, .col-lg-offset-9, .col-xs-12, .col-sm-3, .col-md-3, .col-lg-3;
     position: absolute;
     text-align: right;
 }
-
 .about-text {
     @extend .col-sm-offset-1, .col-md-offset-1, .col-lg-offset-1, .col-xs-12, .col-sm-10, .col-md-10, .col-lg-10;
     font-family: myraid-pro;
-    color: white;
+    color: $corvette-white;
     position: absolute;
 }
-
 .navbar-brand-corvette {
     @extend .navbar-brand;
     font-family: Corvette;
     color: $corvette-red !important;
     font-size: .3em;
 }
-
 .navbar-brand-authorized {
     @extend .navbar-brand;
     font-family: Corvette;
     color: $corvette-red !important;
     font-size: .6em;
 }
-
 .navbar-dark {
     @extend .navbar-default;
     background-color: black !important;
     color: $corvette-red;
     border: 1px solid $corvette-red;
 }
-
 .modal-title-corvette {
     @extend .modal-title;
     font-family: Corvette;
     color: $corvette-red;
     font-size: .8em
 }
-
 .input-group-register {
     @extend .input-group-addon;
     min-width: 110px;
     max-width: 110px;
 }
-
 .forgot-password {
     font-family: myriad;
     color: white;
     font-size: 1.1em
 }
-
 .forgot-password-subtitle {
     @extend .forgot-password;
     font-size: .8em;
 }
-
 .navbar-user {
     color: $corvette-red !important;
 }
-
 .carousel-caption-custom {
     @extend .carousel-caption;
     bottom-padding: 0px;
     bottom: -20px;
     color: $corvette-orange;
 }
-
 .carousel-indicators-custom {
     @extend .carousel-indicators;
     bottom: -80px !important;
 }
-
 .carousel-active {
     border: 1px solid white;
     border-radius: 50%;
     background-color: $corvette-grey
 }
-
 .navbar-dark .navbar-nav {
     li {
         a {
@@ -357,11 +406,9 @@ body {
         }
     }
 }
-
 .navbar-dark .navbar-text {
     color: $corvette-grey;
 }
-
 .carousel-control.left {
     left: 10%;
     top: -10%;
@@ -370,8 +417,7 @@ body {
         cursor: pointer;
     }
 }
-
-.carousel-control.right{
+.carousel-control.right {
     right: 10%;
     top: -10%;
     color: $corvette-grey;
@@ -379,11 +425,64 @@ body {
         cursor: pointer;
     }
 }
-
 .club-events-home {
     @include home-page-side-widget;
+    background-color: $corvette-grey;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: 7px 7px 5px #444444;
 }
-
 .club-feed-home {
     @include home-page-side-widget;
+}
+.user-actions {
+    position: absolute;
+    right: 3px;
+    top: 63px;
+    background-color: $corvette-grey;
+    z-index: 500;
+    color: $corvette-white;
+    border-radius: 0px 0px 5px 5px;
+    .primary-link {
+        @extend .text-white;
+        &:hover {
+            color: $corvette-white-highlight;
+        }
+    }
+    .secondary-link {
+        @extend .text-red;
+        &:hover {
+            color: $corvette-red-highlight;
+        }
+    }
+}
+.fc-day {
+    background-color: $corvette-grey;
+    color: $corvette-white;
+}
+td.fc-day-number {
+    color: $corvette-white;
+}
+.fc-unthemed .fc-today {
+    background-color: $corvette-grey-highlight;
+    color: black;
+}
+.fc-day-header {
+    background-color: black;
+    color: $corvette-red;
+}
+.fc-center {
+    color: $corvette-red;
+}
+.fc-axis {
+    background-color: black;
+    color: $corvette-red;
+}
+.fc-button {
+    @include custom-button (1px solid $corvette-red, $corvette-red, rgba(0, 0, 0, 0.8), inline-block, center, 1.1em, 1px solid $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(220, 20, 60, 0.4) solid thick);
+    text-shadow: none;
+}
+.fc-content {
+    background-color: $corvette-dark-blue;
+    border-color: $corvette-blue;
 }
