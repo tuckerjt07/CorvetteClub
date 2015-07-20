@@ -7869,12 +7869,6 @@ body {
   font-size: .6em;
 }
 
-.navbar-dark {
-  background-color: black !important;
-  color: #9c0121;
-  border: 1px solid #9c0121;
-}
-
 .modal-title-corvette {
   font-family: Corvette;
   color: #9c0121;
@@ -7896,10 +7890,6 @@ body {
   font-size: .8em;
 }
 
-.navbar-user {
-  color: #9c0121 !important;
-}
-
 .carousel-caption-custom {
   bottom-padding: 0px;
   bottom: -20px;
@@ -7916,12 +7906,25 @@ body {
   background-color: #5c5b61;
 }
 
+.navbar-dark {
+  background-color: black !important;
+  color: #9c0121;
+  border: 1px solid #9c0121;
+}
+.navbar-dark .navbar-dark .navbar-text {
+  color: #5c5b61;
+}
 .navbar-dark .navbar-nav li a {
   color: #5c5b61;
 }
-
-.navbar-dark .navbar-text {
-  color: #5c5b61;
+.navbar-dark .navbar-nav li a:hover {
+  color: #bab8c3;
+}
+.navbar-dark .navbar-user {
+  color: #9c0121;
+}
+.navbar-dark .navbar-user:hover {
+  color: #fb7c87;
 }
 
 .carousel-control.left {
