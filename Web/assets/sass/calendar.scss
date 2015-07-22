@@ -1,0 +1,32 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+.fc-day {
+    background-color: $corvette-grey;
+    color: $corvette-white;
+}
+td.fc-day-number {
+    color: $corvette-white;
+}
+.fc-unthemed .fc-today {
+    background-color: $corvette-grey-highlight;
+    color: black;
+}
+.fc-day-header {
+    background-color: black;
+    color: $corvette-red;
+}
+.fc-center {
+    color: $corvette-red;
+}
+.fc-axis {
+    background-color: black;
+    color: $corvette-red;
+}
+.fc-button {
+    @include custom-button (1px solid $corvette-red, $corvette-red, rgba(0, 0, 0, 0.8), inline-block, center, 1.1em, 1px solid $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(220, 20, 60, 0.4) solid thick);
+    text-shadow: none;
+}
+.fc-content {
+    background-color: $corvette-dark-blue;
+    border-color: $corvette-blue;
+}

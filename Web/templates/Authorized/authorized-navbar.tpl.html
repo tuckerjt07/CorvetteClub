@@ -31,24 +31,27 @@
             <ul class="nav navbar-nav">
                 <li login-scroll
                     ng-click="launchPage.navBarCollapsed = !launchPage.navBarCollapsed">
-                    <a href="#"
-                       ui-sref='app.authorized.home'>
+                    <a ui-sref='app.authorized.home'
+                       ui-sref-active="text-grey-active">
                         Home
                         <span class="sr-only">Login</span>
                     </a>
                 </li>
                 <li>
-                    <a ui-sref='app.authorized.events'>
+                    <a ui-sref='app.authorized.events'
+                       ui-sref-active="text-grey-active">
                         Events
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a ui-sref="app.authorized.members"
+                       ui-sref-active="text-grey-active">
                         Members
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a ui-sref="app.authorized.documents"
+                       ui-sref-active="text-grey-active">
                         Documents
                     </a>
                 </li>

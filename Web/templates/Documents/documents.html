@@ -1,0 +1,10 @@
+<div class="full-screen carbon-fiber-background">
+    <div class="col-centered" ng-init="documentsList.LoadDocuments();">
+        <list-card class="col-centered"
+                   ng-repeat="document in documentsList.documents |orderBy:documentsList.searchBy.value:documentsList.searchBy.reverse | filter:membersList.searchParams"
+                   image="document.icon"
+                   title="document.title"
+                   subtitle=document.date>
+        </list-card>
+    </div>
+</div>

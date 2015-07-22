@@ -1,0 +1,61 @@
+//Create mixins
+@mixin custom-button($border, $color, $background, $display, $text-align, $font-size, $primary-border, $primary-background, $primary-color, $secondary-background, $secondary-color, $secondary-outline) {
+    @extend .btn;
+    border: $border;
+    color: $color;
+    background: $background;
+    display: $display;
+    text-align: $text-align;
+    font-size: $font-size;
+    &:hover, &:active, &:active:hover {
+        border: $primary-border;
+        background: $primary-background;
+        color: $primary-color;
+    }
+    &:focus,
+    &:active:focus,
+    &.active:focus,
+    &.focus,
+    &:active.focus,
+    &.active.focus {
+        border: $secondary-background;
+        color: $secondary-color;
+        outline: $secondary-outline;
+    }
+}
+@mixin text-stroke($fallbackColor, $fillColor, $strokeWidth, $strokeColor) {
+    color: $fallbackColor;
+    -webkit-text-fill-color: $fillColor;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: $strokeWidth;
+    -webkit-text-stroke-color: $strokeColor;
+}
+@mixin home-page-side-widget {
+    background-color: black;
+    padding: 15px;
+    min-width: 100%;
+    .header {
+        background-color: $corvette-grey;
+        color: $corvette-white;
+        text-align: center;
+        font-family: Corvette;
+        font-size: 0.9em;
+        @include text-stroke($corvette-white, $corvette-white, 1px, black);
+    }
+    .widget-icon {
+        font-size: 2.6em;
+    }
+    .widget-list {
+        height: 78px;
+        line-height: 78px;
+        white-space: nowrap;
+    }
+    .widget-item {
+        &:hover {
+            background-color: $corvette-grey-highlight;
+        }
+    }
+    .hide-description {
+        display: none;
+    }
+}

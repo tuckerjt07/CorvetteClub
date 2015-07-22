@@ -3,8 +3,8 @@
     'use strict';
     angular.module('TriLakesCorvetteClub', ['ui.router', 'ui.validate', 'ui.calendar', 'ngAnimate', 'angular-loading-bar', 'ngAnimate',
                                             'CorvetteClub.launchpage.package', 'ui.bootstrap', 'CorvetteClub.event.package',
-                                            'smoothScroll', 'perfectParallax', 'CorvetteClub.global.package',
-                                            'CorvetteClub.authorized.package', 'CorvetteClub.homepage.package'])
+                                            'smoothScroll', 'perfectParallax', 'CorvetteClub.global.package', 'CorvetteClub.members.package',
+                                            'CorvetteClub.authorized.package', 'CorvetteClub.homepage.package', 'CorvetteClub.documents.package'])
         .config(['$stateProvider', '$urlRouterProvider',
             function ($stateProvider, $urlRouterProvider) {
                 $urlRouterProvider.otherwise('/CorvetteClub/Login');
@@ -48,6 +48,24 @@
                                 controller: 'CalendarCtrl as calendar'
                             }
                         }
+                    })
+                    .state('app.authorized.members', {
+                        url: 'MembersList',
+                        views: {
+                            MembersList: {
+                                templateUrl: 'templates/Members/members-list.html',
+                                controller: 'MembersListCtrl as membersList'
+                            }
+                        }
+                    })
+                    .state('app.authorized.documents', {
+                        url: 'Documents',
+                        views: {
+                            Documents: {
+                                templateUrl: 'templates/Documents/documents.html',
+                                controller: 'DocumentsListController as documentsList'
+                            }
+                        }
                     });
-        }]);
+            }]);
 }());

@@ -116,7 +116,6 @@ module.exports = function (grunt) {
             },
             html: {
                 files: ['templates/**/*.html'],
-                tasks: ['include'],
                 options: {
                     livereload: true
                 }
