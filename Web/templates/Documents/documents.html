@@ -1,7 +1,42 @@
 <div class="full-screen carbon-fiber-background">
     <div class="col-centered" ng-init="documentsList.LoadDocuments();">
+        <div class="col-lg-12 form-group text-white">
+            <div class="col-lg-3">
+                <label for="docType">Document Type</label>
+                <select ng-model="documentsList.type"
+                        name="docType"
+                        ng-options="type as type.text for type in documentsList.types"
+                        class="form-control-corvette-club ">
+                    <option value="">-- Document Type --</option>
+                </select>
+            </div>
+            <div class="col-lg-2">
+                <label for="startDate">Start Date:</label>
+                <input ng-model="documentsList.firstDate"
+                       name="startDate"
+                       type="date"
+                       class="form-control-corvette-club"
+                       placeholder="Start Date">
+            </div>
+            <div class="col-lg-2">
+                <label for="lastDate">End Date:</label>
+                <input ng-model="documentsList.lastDate"
+                       name="lastDate"
+                       type="date"
+                       class="form-control-corvette-club"
+                       placeholder="End Date">
+            </div>
+            <div class="col-lg-3">
+                <label for="docName">Document Name:</label>
+                <input ng-model="documentsList.documentName"
+                       name="docName"
+                       type="text"
+                       class="form-control-corvette-club"
+                       placeholder="Document Name">
+            </div>
+        </div>
         <list-card class="col-centered"
-                   ng-repeat="document in documentsList.documents |orderBy:documentsList.searchBy.value:documentsList.searchBy.reverse | filter:membersList.searchParams"
+                   ng-repeat="document in documentsList.documents | filter:documentsList.documentName | filter:documentsList.type.text | daterange:'date':documentsList.firstDate:documentsList.lastDate"
                    image="document.icon"
                    title="document.title"
                    subtitle=document.date>
