@@ -1,0 +1,35 @@
+<div class="full-screen carbon-fiber-background"
+     ng-init="membersList.loadMembers();">
+    <div class="col-lg-12 col-lg-offset-1"
+         style="height: 90vh; overflow: auto;">
+        <div class="col-lg-12 form-group">
+            <div class="col-lg-4">
+                <select ng-model="membersList.searchBy"
+                        ng-options="parameter as parameter.text for parameter in membersList.parameters"
+                        class="form-control-corvette-club col-lg-6">
+                    <option value="">-- No Sort --</option>
+                </select>
+            </div>
+            <div class="input-group col-lg-4">
+                <input ng-model="membersList.searchParams"
+                       type="text"
+                       class="form-control-corvette-club col-lg-6"
+                       placeholder="Search Members"
+                       aria-describedby="searchAddon">
+                <span class="input-group-addon"
+                      id="searchAddon">
+                    <span class="glyphicon glyphicon-search"></span>
+                </span>
+            </div>
+        </div>
+        <div class="col-lg-12"></div>
+        <div class="col-centered">
+            <list-card class="col-centered"
+                              ng-repeat="member in membersList.members |orderBy:membersList.searchBy.value:membersList.searchBy.reverse | filter:membersList.searchParams"
+                       image="member.avatar"
+                       title="member.username"
+                       subtitle="member.firstName + ' ' + member.lastName">
+            </list-card>
+        </div>
+    </div>
+</div>
