@@ -1,0 +1,94 @@
+<div class="full-screen">
+    <div ng-repeat="image in launchPage.Images track by $index"
+         perfect-parallax parallax-ratio=".5" parallax-css="background-position-y" parallax-init-val="-100">
+        <img class="full-screen-img slide-animation"
+             ng-hide="!launchPage.isCurrentSlideIndex($index)"
+             ng-src="{{image.Path}}" />
+    </div>
+    <play-pause></play-pause>
+    <div class="webpage-title"
+         perfect-parallax parallax-ratio="1.0" parallax-css="top" parallax-init-val="30">
+        <p>
+        Tri-Lakes
+        <div class="second-line">
+            Corvette Club
+        </div>
+        </p>
+    </div>
+    <nav class="navbar navbar-dark hidden-sm hidden-md hidden-lg navbar-fixed-top col-xs-12">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" ng-click="launchPage.navBarCollapsed = !launchPage.navBarCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p class="navbar-brand-corvette" href="#">Tri-Lakes Corvette Club</p>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" collapse="launchPage.navBarCollapsed">
+                <ul class="nav navbar-nav">
+                    <li login-scroll
+                        ng-click="launchPage.navBarCollapsed = !launchPage.navBarCollapsed">
+                        <a href="#">
+                            Login
+                            <span class="sr-only">Login</span>
+                        </a>
+                    </li>
+                    <li><a href="#">Register</a></li>
+                    <li about-scroll
+                        ng-click="launchPage.navBarCollapsed = !launchPage.navBarCollapsed">
+                        <a href="#">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="home-actions"
+         perfect-parallax parallax-ratio="1.0" parallax-css="top" parallax-init-val="30">
+        <p class="home-action-button"
+           ng-click="launchPage.open();">
+            Register
+        </p>
+        <span class="home-action-button"
+              login-scroll>
+            Login
+        </span>
+    </div>
+    <p class="about-club"
+       perfect-parallax parallax-ratio="0.9" parallax-css="bottom" parallax-init-val="100">
+        Welcome to the online garage of the Tri-Lakes Corvette Club
+    </p>
+    <p class="about-club-xs"
+       perfect-parallax parallax-ratio="0.9" parallax-css="bottom" parallax-init-val="180">
+        Welcome to the online garage of the Tri-Lakes Corvette Club
+    </p>
+    <div class="lauch-page-footer">
+        <span class="title">Tri-Lakes Corvette Club</span>
+        <span class="space"></span>
+        <span>
+            <span add-pointer login-scroll class="link psuedo-anchor">Login</span>
+        </span>
+        <span class="space"></span>
+        <span>
+            <span add-pointer class="link psuedo-anchor" ng-click="launchPage.open();">Register</span>
+        </span>
+        <span class="space"></span>
+        <span>
+            <span add-pointer class="link psuedo-anchor" about-scroll>About</a>
+        </span>
+        <span class="space"></span>
+        <span>
+            <a href="mailto:tri-lakescorvetteclub@gmail.com?Subject=Club%20Inquiry" class="link">Contact</a>
+        </span>
+        <span class="space"></span>
+        <span class="copyright">&copy; Jacob Tucker Designs</span>
+    </div>
+</div>
+<about></about>
+<login></login>
