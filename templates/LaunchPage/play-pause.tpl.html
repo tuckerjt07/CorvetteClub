@@ -1,0 +1,19 @@
+<div class="play-pause-container"
+     perfect-parallax parallax-ratio="1.0" parallax-css="bottom" parallax-init-val="40">
+    <div class="glyphicon glyphicon-backward backward-forward"
+         ng-click="launchPage.prevSlide();"
+         tooltip="Go to previous slide">
+        <span sr-only="Previous"></span>
+    </div>
+    <div class="glyphicon glyphicon-play play-pause play-pause-text"
+         ng-click="launchPage.playPause(launchPage.play)"
+         ng-class="{'glyphicon-play': !launchPage.play, 'glyphicon-pause': launchPage.play}"
+         tooltip="{{launchPage.playPauseTooltip}}">
+        <span sr-only="Play"></span>
+    </div>
+    <div class="glyphicon glyphicon-forward backward-forward"
+         ng-click="launchPage.nextSlide();"
+         tooltip="Go to next slide">
+        <span sr-only="Next"></span>
+    </div>
+</div>
