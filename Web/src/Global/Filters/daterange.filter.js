@@ -11,8 +11,6 @@
                 end_date = (end_date && !isNaN(Date.parse(end_date))) ? Date.parse(end_date) : new Date('Dec 31 3000');
                 for (item in list) {
                     if (list.hasOwnProperty(item)) {
-                        alert(list[item][datePropertyName]);
-
                         if (list[item][datePropertyName] >= start_date && list[item][datePropertyName] <= end_date) {
                             result.push(list[item]);
                         }
