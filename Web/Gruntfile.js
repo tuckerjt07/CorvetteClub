@@ -89,9 +89,9 @@ module.exports = function (grunt) {
             },
             images: {
                 expand: true,
-                cwd: 'images/',
+                cwd: 'assets/icon-images/',
                 src: '**/*',
-                dest: 'release/images'
+                dest: 'release/assets/icon-images'
             }
         },
         includeSource: {
