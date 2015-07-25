@@ -1,6 +1,6 @@
-/*global module */
+/*global module, process*/
 module.exports = function (grunt) {
-
+    'use strict';
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -57,6 +57,24 @@ module.exports = function (grunt) {
                 src: '*.min.js',
                 dest: 'release/bower_components/angular'
             },
+            jquery: {
+                expand: true,
+                cwd: 'bower_components/jquery/dist',
+                src: '*.min.js',
+                dest: 'release/bower_components/jquery'
+            },
+            loadingBarCSS: {
+                expand: true,
+                cwd: 'bower_components/angular-loading-bar/build',
+                src: '*.css',
+                dest: 'release/bower_components/angular-loading-bar/build/'
+            },
+            fullCalendarCSS: {
+                expand: true,
+                cwd: 'bower_components/fullcalendar/dist',
+                src: '*.css',
+                dest: 'release/bower_components/fullcalendar/dist'
+            },
             bootstrapFonts: {
                 expand: true,
                 cwd: 'assets/fonts/',
@@ -81,11 +99,11 @@ module.exports = function (grunt) {
                 templates: {
                     html: {
                         js: '<script src="{filePath}"></script>',
-                        css: '<link rel="stylesheet" type="text/css" href="{filePath}" />',
+                        css: '<link rel="stylesheet" type="text/css" href="{filePath}" />'
                     },
                     scss: {
                         scss: '@import "{filePath}";',
-                        css: '@import "{filePath}";',
+                        css: '@import "{filePath}";'
                     }
                 }
             },
@@ -154,7 +172,7 @@ module.exports = function (grunt) {
             all: {
                 options: {
                     port: 9000,
-                    hostname: "0.0.0.0",
+                    hostname: "0.0.0.0"
                 }
             }
         },
@@ -244,15 +262,15 @@ module.exports = function (grunt) {
     grunt.registerTask('openBrowser', ['open']);
     grunt.registerTask('wire', ['wiredep:dev']);
     grunt.registerTask('test', ['karma']);
-    grunt.registerTask('releaseCSS', ['sass:dev','cssmin']);
-    grunt.registerTask('releaseJS', ['copy:angular', 'bower_concat', 'uglify', ]);
+    grunt.registerTask('releaseCSS', ['sass:dev', 'copy:loadingBarCSS', 'copy:fullCalendarCSS', 'cssmin']);
+    grunt.registerTask('releaseJS', ['copy:angular', 'copy:jquery', 'bower_concat', 'uglify']);
     grunt.registerTask('releaseFonts', ['copy:customFonts', 'copy:bootstrapFonts']);
     grunt.registerTask('releaseImages', ['copy:images']);
     grunt.registerTask('releaseHTML', ['copy:html', 'env:release', 'loadconst', 'includeSource']);
-    grunt.registerTask('loadconst', 'Load constants', function() {
+    grunt.registerTask('loadconst', 'Load constants', function () {
         grunt.config('SOURCE', process.env.SOURCE);
         grunt.config('DESTINATION', process.env.DESTINATION);
     });
-    grunt.registerTask('develop', ['jscs', 'env:dev', 'loadconst','includeSource', 'wiredep:dev', 'sass:dev', 'launchServer', 'watch']);
+    grunt.registerTask('develop', ['jscs', 'env:dev', 'loadconst', 'includeSource', 'wiredep:dev', 'sass:dev', 'launchServer', 'watch']);
     grunt.registerTask('release', ['releaseCSS', 'releaseJS', 'releaseFonts', 'releaseImages', 'releaseHTML']);
 };
