@@ -50,7 +50,7 @@
                         }
                     })
                     .state('app.authorized.members', {
-                        url: 'MembersList',
+                        url: '/MembersList',
                         views: {
                             MembersList: {
                                 templateUrl: 'templates/Members/members-list.html',
@@ -59,11 +59,19 @@
                         }
                     })
                     .state('app.authorized.documents', {
-                        url: 'Documents',
+                        url: '/Documents',
                         views: {
                             Documents: {
                                 templateUrl: 'templates/Documents/documents.html',
                                 controller: 'DocumentsListController as documentsList'
+                            }
+                        }
+                    })
+                    .state('app.authorized.merchandise', {
+                        url: '/Merchandise',
+                        views: {
+                            Merchandise: {
+                                templateUrl: 'templates/Merchandise/merchandise.html'
                             }
                         }
                     });

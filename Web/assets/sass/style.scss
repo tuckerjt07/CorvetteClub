@@ -66,6 +66,9 @@ body {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+");
     z-index: 0;
 }
+.grey-background {
+    background-color: $corvette-grey;
+}
 .btn-submit {
     @include custom-button (1px solid $corvette-red, $corvette-red, rgba(0, 0, 0, 0.8), inline-block, center, 1.1em, 1px solid $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(100, 100, 100, 0.8), $corvette-red, rgba(220, 20, 60, 0.4) solid thick);
 }
