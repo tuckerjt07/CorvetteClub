@@ -1,20 +1,8 @@
-<div class="full-screen carbon-fiber-background">
+<div class="full-screen carbon-fiber-background" ng-init="merchandise.getProducts();">
     <div class="col-lg-10 col-lg-offset-1 grey-background">
-        <div class="col-lg-2 text-center">
-            <img ng-src="http://www.loremflickr.com/150/120/corvette"
-                 style="padding-top: 10px;">
-            <div class="col-lg-12 text-red text-left">
-                $9.99
-            </div>
-            <a class="col-lg-12 text-dark-blue text-left"
-               add-pointer>
-                Title
-            </a>
-            <button type="button"
-                    class="btn btn-submit col-lg-10 col-lg-offset-1"
-                    style="margin-bottom: 10px;">
-                Add to Cart
-            </button>
-        </div>
+        <merchandise-item ng-repeat="item in merchandise.products"
+                          item="item"
+                          class="col-lg-2 text-center">
+        </merchandise-item>
     </div>
 </div>

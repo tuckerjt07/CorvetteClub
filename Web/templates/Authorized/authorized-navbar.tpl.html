@@ -24,6 +24,14 @@
                 User
             </a>
         </p>
+        <a class="navbar-text navbar-right"
+           ui-sref='app.authorized.shoppingcart'
+           ng-disabled="navbar.numberOfItemsInCart <= 0"
+           ng-class="{'add-pointer': navbar.numberOfItemsInCart > 0}">
+            <span ng-show="navbar.numberOfItemsInCart > 0"
+                  class="shopping-cart-amount">{{navbar.numberOfItemsInCart}}</span>
+            <span class="glyphicon glyphicon-shopping-cart-navbar"></span>
+        </a>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse"
              id="bs-example-navbar-collapse-1"

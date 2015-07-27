@@ -11,6 +11,7 @@
             return {
                 restrict: 'AE',
                 replace: true,
+                controller: 'NavbarCtrl as navbar',
                 link: function (scope, element, attrs) {
                     myScope = scope;
                     myElement = element;

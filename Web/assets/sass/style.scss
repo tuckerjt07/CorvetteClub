@@ -75,6 +75,10 @@ body {
 .btn-cancel {
     @include custom-button (1px solid #111111, #111111, rgba(100, 100, 100, 0.8), inline-block, center, 1.1em, 1px solid #444444, rgba(0, 0, 0, 0.8), #bbbbbb, rgba(0, 0, 0, .8), #bbbbbb, rgba(100, 100, 100, 0.4) solid thick);
 }
+.btn-danger {
+    @extend .btn-danger;
+    @include custom-button (1px solid lighten($corvette-red, 10%), $corvette-grey-highlight, $corvette-red, inline-block, center, 1.1em, 1px solid lighten($corvette-red, 10%), lighten($corvette-red, 10%), $corvette-grey-highlight, rgba(100, 100, 100, 0.8), $corvette-grey-highlight, rgba(220, 20, 60, 0.4) solid thick);
+}
 .full-screen {
     min-height: 100vh;
     min-width: 100vw;
@@ -411,5 +415,69 @@ body {
     @extend .form-control;
     &:focus {
         border-color: $corvette-bright-red;
+    }
+}
+
+.glyphicon-shopping-cart-navbar {
+    @extend.glyphicon-shopping-cart;
+    font-size: 1.6em;
+    vertical-align: middle;
+}
+
+.shopping-cart-amount {
+    border-radius: 50%;
+    min-height: 15px;
+    min-width: 15px;
+    text-align: center;
+    display: inline-block;
+    line-height: 15px;
+    position: relative;
+    left: 24px;
+    z-index: 1;
+    color: black;
+}
+
+.add-pointer {
+    cursor: pointer;
+}
+
+.inner-container {
+    height: 80vh;
+}
+
+.shopping-cart {
+    color: black;
+    hr {
+        color: black;
+        background-color: black;
+        border: 1px solid black;
+        height: 1px;
+    }
+    .shopping-cart-item {
+        height: 120px;
+        line-height: 120px;
+        padding: 10px;
+        border-bottom: 1px solid #111111;
+        margin-top: 20px;
+        h4, a {
+            margin-top: -20px;
+        }
+        p {
+            margin-top: 40px;
+            color: $corvette-red;
+        }
+    }
+    .product-price {
+        @extend .col-lg-1;
+        color: $corvette-dark-blue;
+        h4 {
+            margin-top: -20px;
+        }
+    }
+    .product-quantity {
+        @extend .col-lg-1, .col-lg-offset-2;
+        select {
+            margin-top: -20px;
+        }
     }
 }

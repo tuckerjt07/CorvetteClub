@@ -1,0 +1,21 @@
+<div>
+    <a ui-sref="app.authorized.merchandise, {item.id: id}"
+       add-pointer>
+        <img ng-src={{item.image}}
+         style="padding-top: 10px;">
+    </a>
+    <div class="col-lg-12 text-red text-left">
+        {{item.price}}
+    </div>
+    <a class="col-lg-12 text-dark-blue text-left"
+       add-pointer
+       ui-sref="app.authorized.merchandise, {item.id: id}">
+        {{item.title}}
+    </a>
+    <button type="button"
+            class="btn btn-submit col-lg-10 col-lg-offset-1"
+            style="margin-bottom: 10px;"
+            ng-click="merchandise.addItemToCart(item);">
+        Add to Cart
+    </button>
+</div>

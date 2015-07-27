@@ -4,7 +4,8 @@
     angular.module('TriLakesCorvetteClub', ['ui.router', 'ui.validate', 'ui.calendar', 'ngAnimate', 'angular-loading-bar', 'ngAnimate',
                                             'CorvetteClub.launchpage.package', 'ui.bootstrap', 'CorvetteClub.event.package',
                                             'smoothScroll', 'perfectParallax', 'CorvetteClub.global.package', 'CorvetteClub.members.package',
-                                            'CorvetteClub.authorized.package', 'CorvetteClub.homepage.package', 'CorvetteClub.documents.package'])
+                                            'CorvetteClub.authorized.package', 'CorvetteClub.homepage.package',
+                                            'CorvetteClub.documents.package', 'CorvetteClub.merchandise.package'])
         .config(['$stateProvider', '$urlRouterProvider',
             function ($stateProvider, $urlRouterProvider) {
                 $urlRouterProvider.otherwise('/CorvetteClub/Login');
@@ -71,7 +72,17 @@
                         url: '/Merchandise',
                         views: {
                             Merchandise: {
-                                templateUrl: 'templates/Merchandise/merchandise.html'
+                                templateUrl: 'templates/Merchandise/merchandise.html',
+                                controller: 'MerchandiseCtrl as merchandise'
+                            }
+                        }
+                    })
+                    .state('app.authorized.shoppingcart', {
+                        url: '/ShoppingCart',
+                        views: {
+                            ShoppingCart: {
+                                templateUrl: 'templates/Merchandise/shopping-cart.html',
+                                controller: 'ShoppingCartCtrl as cart'
                             }
                         }
                     });
