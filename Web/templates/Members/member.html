@@ -1,0 +1,78 @@
+<div class="full-screen carbon-fiber-background">
+    <div class="member-profile"
+         ng-init="member.getMember();">
+        <div class="username-block">
+            <h2>{{member.Member.username}}</h2>
+        </div>
+        <hr />
+        <div class="col-lg-12" style="padding-left: 0px;">
+            <img class="profile-image" ng-src="{{member.Member.avatar}}">
+            <div class="top-level-details">
+                <h3>{{member.Member.firstName}}</h3>
+                <h3>{{member.Member.lastName}}</h3>
+                <p><span class="glyphicon glyphicon-pushpin"></span>&nbsp;{{member.Member.location}}</p>
+            </div>
+        </div>
+        <hr />
+        <div class="left-column">
+            <div class="message-button"
+                 tooltip="Send {{member.Member.username}} a message">
+                <h4>Message <span></span></h4>
+            </div>
+            <hr />
+            <div>
+                Birthday: {{member.Member.birthday | date}}
+            </div>
+            <hr />
+            <div>
+                Last Active: {{member.Member.lastActive | date}}
+            </div>
+            <hr />
+        </div>
+        <div class="member-content">
+            <div class="col-lg-12 initial-header">
+                <div class="header"
+                     ng-click="Photos = !Photos"
+                     tooltip="Toggle Photos">
+                    <h3>Photos
+                        <span class="glyphicon pull-right" ng-class="{'glyphicon-chevron-right': Photos, 'glyphicon-chevron-down': !Photos}">
+                        </span>
+                    </h3>
+
+                </div>
+                <hr />
+                <div class="col-lg-12 container"
+                     collapse="Photos">
+                    <thumbnails ng-repeat="thumbnail in member.Member.images"
+                                src="thumbnail.image"
+                                description="thumbnail.description"
+                                click="member.OpenSlideShow();">
+                    </thumbnails>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="header"
+                     ng-click="Cars = !Cars"
+                     tooltip="Toggle Cars">
+                    <h3>
+                        Cars
+                        <span class="glyphicon pull-right" ng-class="{'glyphicon-chevron-right': Cars, 'glyphicon-chevron-down': !Cars}">
+                        </span>
+                    </h3>
+                </div>
+                <hr />
+                <div class="col-lg-12 container"
+                     collapse="Cars">
+                    <member-cars ng-repeat="car in member.Member.cars"
+                                 src="car.image"
+                                 year="car.year"
+                                 model="car.model"
+                                 make="car.make"
+                                 click="member.OpenCar(car);">
+                    </member-cars>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

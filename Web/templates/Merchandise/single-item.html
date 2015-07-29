@@ -1,0 +1,25 @@
+<div class="full-screen carbon-fiber-background">
+    <div class="col-lg-10 col-lg-offset-1 grey-background">
+        <div class="col-lg-12">
+            <img ng-src="{{product.Product.image}}"
+                 class="pull-left"
+                 style="padding: 10px;">
+            <h2>{{product.Product.title}}</h2>
+            <br />
+            <p class="text-white">{{product.Product.description}}</p>
+            <br />
+            <div>
+                <p class="text-black">
+                    Price: <strong class="text-red">{{product.Product.price | currency}}</strong>
+                </p>
+            </div>
+            <br />
+            <button type="button"
+                    class="btn btn-submit pull-right"
+                    ng-click="product.addItemToCart(product.Product);">
+                Add to Cart
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+            </button>
+        </div>
+    </div>
+</div>

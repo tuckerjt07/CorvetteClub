@@ -1,15 +1,15 @@
-<div>
-    <a ui-sref="app.authorized.merchandise, {item.id: id}"
+<div class="merchandise-item">
+    <a ui-sref="app.authorized.item({id: item.id})"
        add-pointer>
         <img ng-src={{item.image}}
-         style="padding-top: 10px;">
+         style="padding-top: 10px; padding-bottom: 10px;">
     </a>
     <div class="col-lg-12 text-red text-left">
-        {{item.price}}
+        {{item.price | currency}}
     </div>
     <a class="col-lg-12 text-dark-blue text-left"
        add-pointer
-       ui-sref="app.authorized.merchandise, {item.id: id}">
+       ui-sref="app.authorized.item({id: item.id})">
         {{item.title}}
     </a>
     <button type="button"
@@ -17,5 +17,6 @@
             style="margin-bottom: 10px;"
             ng-click="merchandise.addItemToCart(item);">
         Add to Cart
+        <span class="glyphicon glyphicon-shopping-cart"
     </button>
 </div>

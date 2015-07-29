@@ -1,0 +1,101 @@
+.member-profile {
+    @extend .col-lg-10, .col-lg-offset-1, .grey-background;
+    height: 85vh;
+    overflow: auto;
+    .profile-image {
+        @extend .pull-left;
+        padding-right: 30px;
+        padding-left: 0px;
+    }
+    hr {
+        color: black;
+        border: 1px solid black;
+        padding: 0px;
+    }
+    .top-level-details {
+        @extend .col-lg-2;
+        padding-top: 190px;
+        color: $corvette-dark-blue;
+        p {
+            color: $corvette-white;
+        }
+    }
+    .left-column {
+        @extend .col-lg-3, .pull-left;
+        margin-top: -20px;
+        padding: 0px;
+        hr {
+            margin-top: 0px;
+            -webkit-margin-before: 0px;
+        }
+        .message-button {
+            @extend .text-dark-blue;
+            height: 40px;
+            line-height: 40px;
+            white-space: nowrap;
+            padding-left: 20px;
+            h4 {
+                margin: 0px;
+                line-height: 40px;
+            }
+            span {
+                @extend .pull-right, .glyphicon, .glyphicon-envelope;
+                padding-right: 20px;
+                line-height: 40px;
+            }
+            &:hover {
+                background-color: $corvette-grey-highlight;
+                cursor: pointer;
+                @extend .text-dark-blue-highlight;
+            }
+        }
+    }
+    .member-content {
+        @extend .col-lg-offset-3;
+        padding-left: 30px;
+        margin-top: -19px;
+        hr {
+            margin-top: 0px;
+            -webkit-margin-before: 0px;
+            margin-bottom: 0px;
+            -webkit-margin-after: 0px;
+        }
+        .initial-header {
+            margin-top: -19px;
+        }
+        .header {
+            height: 40px;
+            line-height: 40px;
+            white-space: nowrap;
+            h3 {
+                margin-bottom: 0px;
+                margin-top: 0px;
+                line-height: 40px;
+            }
+            .glyphicon {
+                @extend .glyphicon;
+                padding-top: 7px;
+            }
+            &:hover {
+                color: lighten($corvette-grey, 20%);
+                background-color: $corvette-grey-highlight;
+                cursor: pointer;
+            }
+        }
+        .container {
+            max-height: 33vh;
+            overflow: auto;
+            .member-cars {
+                @extend .col-lg-4, .text-white, .center-block;
+            }
+        }
+    }
+    .username-block {
+
+    }
+}
+
+.image-size {
+    width: 180px;
+    height: 200px;
+}

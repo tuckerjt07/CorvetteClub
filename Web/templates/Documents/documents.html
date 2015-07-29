@@ -35,11 +35,13 @@
                        placeholder="Document Name">
             </div>
         </div>
-        <list-card class="col-centered"
-                   ng-repeat="document in documentsList.documents | filter:documentsList.documentName | filter:documentsList.type.text | daterange:'date':documentsList.firstDate:documentsList.lastDate"
-                   image="document.icon"
-                   title="document.title"
-                   subtitle=document.date>
-        </list-card>
+        <div class="col-lg-12 col-lg-offset-1">
+            <list-card class="col-centered"
+                       ng-repeat="document in documentsList.documents | filter:documentsList.documentName | filter:documentsList.type.text | daterange:'date':documentsList.firstDate:documentsList.lastDate"
+                       image="document.icon"
+                       title="document.title"
+                       subtitle=document.date>
+            </list-card>
+        </div>
     </div>
 </div>
